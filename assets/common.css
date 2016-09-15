@@ -1,6 +1,26 @@
 /* simple style following http://jgthms.com/web-design-in-4-minutes */
 
 body {
-  margin: auto;
-  max-width: 50em;
+    margin: auto;
+    max-width: 50em;
+    font-family: "Helvetica", "Arial", sans-serif;
+    /* more readable */
+    line-height: 1.5;
+    padding: 4em 1em;
+}
+
+
+/* TODO: what about other hx? */
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+h1, h2, h3, h4 {
+    color: #222;
+}
+
+a {
+    color: #e81c4f;
 }
