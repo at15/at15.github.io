@@ -73,13 +73,11 @@
 % subject (first and last name) with the text from the optional
 % argument underneath it
 \renewcommand\part[2][Curriculum Vitae]{%
-    \twocolumn[%
     \begin{center}
-	\vskip-\lastskip%
-	{\usekomafont{part} #2} \medskip\\
-	{\fontfamily{pzc}\selectfont\Huge {#1}}
-	\bigskip
-    \end{center}]}
+	   \vskip-\lastskip%
+	     {\usekomafont{part} #2} \medskip\\
+	   \bigskip
+    \end{center}}
 
 % Overrides the \section command to capitalize every
 % word for cosmetic purposes and draws a rule under it.
