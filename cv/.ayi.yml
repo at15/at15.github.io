@@ -1,0 +1,3 @@
+scripts:
+  build: xelatex at15.en.tex
+  clean: rm *.aux *.log *.out
