@@ -30,6 +30,7 @@
 \LoadClassWithOptions{scrartcl}
 
 \setcounter{secnumdepth}{-1}
+% https://www.sharelatex.com/learn/Page_size_and_margins
 \RequirePackage[hmargin=1.25cm,vmargin=1.25cm,twocolumn,columnsep=1.25cm]{geometry}
 \RequirePackage{bookman,etoolbox,needspace,pifont,tabularx,xcolor}
 \RequirePackage{hyperref}
@@ -74,9 +75,7 @@
 % argument underneath it
 \renewcommand\part[2][Curriculum Vitae]{%
     \begin{center}
-	   \vskip-\lastskip%
-	     {\usekomafont{part} #2} \medskip\\
-	   \bigskip
+	     {\usekomafont{part} #2}
     \end{center}}
 
 % Overrides the \section command to capitalize every
