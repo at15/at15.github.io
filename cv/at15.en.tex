@@ -1,6 +1,6 @@
 \documentclass[fontsize=10pt]{tccv}
 \usepackage[english]{babel}
-% \usepackage{fontawesome} % disable font-awesome speed up A LOT
+\usepackage{fontawesome} % disable font-awesome speed up A LOT
 % \usepackage[compact]{titlesec} fail
 
 \begin{document}
@@ -119,9 +119,12 @@ real time monitor.
 %       {+39 (30) 6862332}
 %       {ntd@entidi.it}
 \begin{tabularx}{\dimexpr\linewidth-2\fboxsep\relax}{cX}
-\Large\ding{45} & {aaa}\smallskip\\
-\Large\ding{37} & {bbbb}\smallskip\\
-\Large\ding{41} & \href{mailto:at15@outlook.com}{at15@outlook.com}
+% TODO: pdfnewwindow is not working http://tex.stackexchange.com/questions/200577/make-hyperref-links-open-in-new-browser-window-for-easier-navigation
+\faHome & \href{https://at15.github.io}{at15.github.io}\smallskip\\
+\faEnvelope& \href{mailto:at15@outlook.com}{at15@outlook.com}\smallskip\\
+\faGithub & \href{https://github.com/at15}{at15}\smallskip\\
+\faLinkedin & \href{https://www.linkedin.com/in/at1510086}{at1510086}\smallskip\\
+
 \end{tabularx}
 \end{figure}
 
