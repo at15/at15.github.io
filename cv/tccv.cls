@@ -31,7 +31,7 @@
 
 \setcounter{secnumdepth}{-1}
 % https://www.sharelatex.com/learn/Page_size_and_margins
-\RequirePackage[hmargin=1.25cm,vmargin=1.25cm,twocolumn,columnsep=1.25cm]{geometry}
+\RequirePackage[hmargin=0.8cm,vmargin=0.6cm,twocolumn,columnsep=1cm]{geometry}
 \RequirePackage{bookman,etoolbox,needspace,pifont,tabularx,xcolor}
 \RequirePackage{hyperref}
 
