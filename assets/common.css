@@ -24,3 +24,8 @@ h1, h2, h3, h4 {
 a {
     color: #e81c4f;
 }
+
+h4>a {
+    color: #222;
+    text-decoration: none;
+}
