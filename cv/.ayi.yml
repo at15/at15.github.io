@@ -1,4 +1,4 @@
-install: xelatex at15.en.tex
+install: xelatex resume.tex
 scripts:
   build: xelatex at15.en.tex
   clean: rm *.aux *.log *.out
