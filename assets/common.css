@@ -9,8 +9,10 @@ body {
     padding: 4em 1em;
 }
 
-
 /* TODO: what about other hx? */
+div#head-line > h1 {
+  float: right;
+}
 
 h2 {
     margin-top: 1em;
