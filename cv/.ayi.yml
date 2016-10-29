@@ -1,5 +1,10 @@
-install: xelatex simple-cv.tex
+install:
+  - xelatex Pinglei_Guo_Resume.tex
+  # for backwards compatibility 
+  - cp Pinglei_Guo_Resume.pdf at15.en.pdf
 scripts:
   build: xelatex at15.en.tex
   awesome-cv: xelatex resume.tex
-  clean: rm *.aux *.log *.out
+  # TODO: this is not working, due to Ayi split them?
+  clean:
+    - sh -c "rm *.aux *.out *.log"
