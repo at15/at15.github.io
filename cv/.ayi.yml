@@ -1,4 +1,5 @@
-install: xelatex resume.tex
+install: xelatex simple-cv.tex
 scripts:
   build: xelatex at15.en.tex
+  awesome-cv: xelatex resume.tex
   clean: rm *.aux *.log *.out

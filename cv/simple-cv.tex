@@ -1,0 +1,74 @@
+% TODO: letterpaper, a4paper
+\documentclass[10pt, letterpaper]{simple-cv}
+\usepackage{fontawesome}
+
+\begin{document}
+
+\name{Pinglei Guo}
+\centerline{\faMobile\ 831-295-1214\ \
+\href{mailto:piguo@ucsc.edu}{\faEnvelope\ piguo@ucsc.edu}\ \
+\href{https://at15.github.io}{\faHome\ at15.github.io}\ \
+\href{https://github.com/at15}{\faGithubSquare\ at15}\ \
+\href{https://www.linkedin.com/in/at1510086}{\faLinkedinSquare\ at1510086}}
+
+\section{Education}
+\datedsubsection{\textbf{MS. Computer Science} University of California Santa Cruz}{\textit{Sep. 2016 -- June 2018}}
+\datedsubsection{\textbf{BS. Material Science} Shanghai Jiao Tong University}{\textit{Sep. 2012 -- June 2016}}
+
+\section{Programming language}
+\begin{tabular}{ l l }
+ Experienced & Golang, Java, JavaScript (Node.JS), PHP, HTML, CSS \\
+ Intermediate & Python, Shell, SQL, C\#, Ruby,  Scala \\
+\end{tabular}
+
+\section{Software \& Frameworks}
+\begin{tabular}{ l l }
+ Experienced & Git, Laravel, Express, AngularJS, jQuery, BootStrap, Vagrant \\
+ Intermediate & MySQL, Redis, MongoDB, ElasticSearch, Rails, Dropwizard, Spring, ASP.NET  \\
+ Basic & Docker, Mesos, Kubernetes, Cassandra, Kafka, Ceph, Hadoop, HBase, Hive, Netty
+\end{tabular}
+
+\section{Experience}
+\datedsubsection{Systems Research Lab: Research assistant}{UC Santa Cruz \textit{Oct. 2016 -- Present}}
+\begin{itemize}
+\item Building a \textbf{hybrid distributed time series and graph database} for OLAP as master thesis
+\item Validating distributed systems' (ie: Ceph) correctness by extending Jepsen
+\end{itemize}
+
+\datedsubsection{SJTU CIT Lab: Research assistant}{Shanghai, China \textit{Mar. 2015 -- Jan. 2016}}
+\begin{itemize}
+\item Built a distributed system monitoring and predicting prototype using \textbf{Cassandra} and \textbf{ElasticSearch}
+\item Found memory bug in China Telecom's production Storm Cluster using the prototype
+\item Coauthored the paper \textit{\href{https://at15.github.io/pub/cpu_load_prediction.pdf}{CPU load Prediction based on a multidimensional spatial voting model}}
+\end{itemize}
+
+\datedsubsection{GitCafe: Software Engineer Intern}{Shanghai, China \textit{Jan. 2016 -- Mar. 2016}}
+\begin{itemize}
+\item Built web application using \textbf{Rails} and \textbf{AngularJS}. Use \textbf{ElasticSearch} and \textbf{MongoDB} as backend storage.
+\item Optimized markdown parser, added support for todo and increased 10\% speed.
+\end{itemize}
+
+\datedsubsection{Dongyue Web Studio: Full stack web developer \& President}{Shanghai, China \textit{Sep. 2013 -- Mar. 2016}}
+\begin{itemize}
+\item Lead web and mobile development of \url{http://tongqu.me} daily active user \textbf{increased from 500 to 3,000}.
+\item Handle \textbf{high concurrency} by using Redis for cache and rate limit, increase QPS by 120\% for hot events
+\item Added functionality of booking movie tickets and sports venues, integrate with Alipay for \textbf{online payment}
+\item Built internal \textbf{continuous} test and deploy system around \textbf{GitLab} and GitLab CI using \textbf{container}.
+\item Built \textbf{RESTful API} and rich internet application using Laravel, AngularJS and BootStrap
+\end{itemize}
+
+\section{Project}
+
+\datedsubsection{Xephon-B: Time series database benchmark suite: Project Leader}{UC Santa Cruz \textit{Oct. 2016 -- Present}}
+\begin{itemize}
+\item \url{https://github.com/xephonhq/xephon-b} is a benchmark suite for \textbf{distributed time series databases}.
+\item A platform where developers and vendors can share and compare benchmark result vertically and horizontally.
+\end{itemize}
+
+% TODO: this won't fix into the letter paper
+% \datedsubsection{Scala-linter: Project Leader}{Shanghai, China \textit{Mar. 2015 -- June 2015}}
+% \begin{itemize}
+% \item \url{https://github.com/at15/scala-linter} is a compiler plugin that checks dead code and generate report.
+% \item contributed to Scala official documentation
+% \end{itemize}
+\end{document}
