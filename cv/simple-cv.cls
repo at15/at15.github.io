@@ -14,7 +14,7 @@
 
 % switch off page number
 \pagenumbering{gobble}
-\geometry{left=1.8cm, top=1.5cm, right=1.8cm, bottom=2.0cm, footskip=.5cm}
+\geometry{left=1.8cm, top=1.0cm, right=1.8cm, bottom=2.0cm, footskip=.5cm}
 
 \newcommand{\name}[1]{
   \centerline{\Large{#1}}
