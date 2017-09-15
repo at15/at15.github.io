@@ -14,7 +14,7 @@
 
 % switch off page number
 \pagenumbering{gobble}
-\geometry{left=1.8cm, top=1.0cm, right=1.8cm, bottom=2.0cm, footskip=.5cm}
+\geometry{left=1.3cm, top=1.0cm, right=1.3cm, bottom=2.0cm, footskip=.5cm}
 
 \newcommand{\name}[1]{
   \centerline{\Large{#1}}
@@ -42,8 +42,6 @@
 \newcommand{\datedsubsection}[2]{%
   \subsection[#1]{#1 \hfill #2}%
 }
-
-
 
 \newcommand{\workitems}[3]{
     \begin{itemize}
