@@ -2,7 +2,7 @@
 % to use times new roman https://tex.stackexchange.com/questions/153168/how-to-set-document-font-to-times-new-roman-by-command
 \usepackage{mathptmx}
 \usepackage{enumitem}
-\setlist{noitemsep}
+% \setlist{noitemsep}
 
 \begin{document}
 
@@ -20,80 +20,61 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 
 \section{Education}
 % FIXED: too much space between educations
-\datedsubsection{MS. Computer Science University of California Santa Cruz GPA 4.0}{Sep. 2016 -- March 2018}
+\datedsubsection{MS. Computer Science \quad University of California Santa Cruz \quad \ GPA 4.0}{\textbf{Sep. 2016 -- March 2018}}
 % Courses: Distributed systems, Database Systems, Storage System
-\datedsubsection{BS. Material Science Shanghai Jiao Tong University GPA 3.3}{Sep. 2012 -- June 2016}
+\datedsubsection{BS. Material Science \qquad Shanghai Jiao Tong University \qquad  \quad GPA 3.3}{\textbf{Sep. 2012 -- June 2016}}
 
 \section{Work Experience}
 
-% FIXME: remove spacing for last item ... to much spacing when item meet subsection
-\datedsubsection{PayPal: Software Engineer Intern}{San Jose, California June 2017 - Sep. 2017}
+\datedsubsection{PayPal: Software Engineer Intern}{San Jose, California \quad \textbf{June 2017 - Sep. 2017}}
 \begin{itemize}
-\item Built admin server for internal \textbf{container orchestration} platform using \textbf{Go}, deployed in \textbf{production} on \textbf{Mesos} using \textbf{docker}.
-\item Enhanced dashboard using \textbf{Angular 4}, used by operation team to troubleshoot Java, Node application and manage cluster itself.
-\item Introduced full text search using \textbf{Solr}, \textbf{open sourced} Go client with enhanced performance and support for SolrCloud.
-\item Furthered continuous integration (\textbf{CI}) and deployment (\textbf{CD}) in QA using \textbf{Jenkins} and \textbf{Docker}.
+  \item Built admin server for internal \textbf{container orchestration} platform using \textbf{Go}. Deployed in \textbf{production} on \textbf{Mesos} using \textbf{Docker}.
+  \item Enhanced dashboard using \textbf{Angular 4}, used by operation team to troubleshoot Java, Node application and manage cluster itself.
+  \item Introduced full text search using \textbf{Solr}, \textbf{open sourced} Go client with enhanced performance and support for SolrCloud.
+  \item Furthered continuous integration (\textbf{CI}) and deployment (\textbf{CD}) in QA using \textbf{Jenkins} and \textbf{Docker}.
 \end{itemize}
 
-% \datedsubsection{University of California Santa Cruz: Research assistant}{Santa Cruz, California \textit{Nov. 2016 -- Present}}
-% \begin{itemize}
-% \item Created benchmark suite for various time series databases including OpenTSDB, KariosDB, InfluxDB.
-% \item Design and implemented time series database with multiple backends including \textbf{Cassandra}, \textbf{MySQL}, raw disk.
-% \end{itemize}
-
-\datedsubsection{GitCafe: Software Engineer Intern}{Shanghai, China Jan. 2015 -- Mar. 2015}
+\datedsubsection{GitCafe: Software Engineer Intern}{Shanghai, China \quad \textbf{Jan. 2015 -- March 2015}}
 \begin{itemize}[topsep=0pt]
-% TODO: split into two lines
-\item Reduced \textbf{Ruby on Rails} application load time by 5\% through optimizing regular expression in markdown parser.
-\item Fixed user subsubcription logic, solved 20\% pricing related user tickets.
-% \item Refactored \textbf{jQuery} codebase using \textbf{AngularJS}
-% \item Optimized markdown parser, added support for todo and increased 10\% speed.
-% \item Helped customers (developers) understand Git work flow and explain Git internals.
+  \item Reduced \textbf{Ruby on Rails} application load time by 5\% through optimizing regular expression in markdown parser.
+  \item Fixed user subsubcription logic, solved 20\% pricing related user tickets.
 \end{itemize}
 
-% \datedsubsection{SJTU CIT Lab: Research assistant}{Shanghai, China \textit{Mar. 2015 -- Jan. 2016}}
-% \begin{itemize}
-% \item Implemented system monitoring and predicting prototype for China Telecom using \textbf{Cassandra} and \textbf{MongoDB}.
-% \item Coauthored the paper \textit{\href{https://at15.github.io/pub/cpu_load_prediction.pdf}{CPU load Prediction based on a multidimensional spatial voting model}}
-% \end{itemize}
+\datedsubsection{Dongyue Web Studio: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad \textbf{Sep. 2013 -- Jan. 2016}}
+\begin{itemize}
+  \item Utilized \textbf{Redis} as cache and rate limiter, increased QPS by 120\%, reduced database load by 40\%, filtered out most bot traffic.
+\end{itemize}
 
-% \datedsubsection{Dongyue Web Studio: (Part-time) Full stack web developer}{Shanghai, China \textit{Sep. 2013 -- Jan. 2016}}
-% \begin{itemize}
-% \item Lead web and mobile development of \url{http://tongqu.me} increased daily active user from 500 to 3,000
-% \item Handle \textbf{high concurrency} by using \textbf{Redis} for cache and rate limit, increase \textbf{QPS by 120\%} for hot events
-% \item Build high concurrent PHP+MySQL application using Redis as cache and queue, increase QPS by 120\%
-% \item Added functionality of booking movie tickets and sports venues, integrate with Alipay for \textbf{online payment}
-% \item Built internal \textbf{continuous integration} for test and deploy system around \textbf{GitLab} using \textbf{container}.
-% \item Built RESTful API and rich internet application using Laravel(with HHVM), AngularJS and BootStrap
-% \item Lead development of Android and iOS mobile app
-% \item Started a weekly newsletter on \textbf{open source technologies} \url{https://github.com/dyweb/weekly}
-% \end{itemize}
+\section{Project Experience}
+
+\datedsubsection{\textbf{Distributed Time Series Database}}{University of California Santa Cruz \quad \textbf{Nov. 2016 -- Present}}
+
+% \href{https://github.com/xephonhq/xephon-k}{https://github.com/xephonhq/xephon-k}
+
+\begin{itemize}
+  \item Implemented a distributed time series database on top of \textbf{Cassandra} in \textbf{Go}. Support both \textbf{JSON} and \textbf{Protobuf} via HTTP/2.
+  \item Designed a \textbf{columnar format} modeled after \textbf{Parquet} and \textbf{InfluxDB} with higher compression and less write amplification.
+  \item Created \textbf{benchmark suite} for Xephon-K, OpenTSDB, KariosDB, InfluxDB and a consistent client interface for different TSDB.
+\end{itemize}
+
+\datedsubsection{Distributed systems monitoring prototype}{Shanghai Jiao Tong University \quad \textbf{Mar. 2015 -- Jan. 2016}}
+
+\begin{itemize}
+  \item Enhanced monitoring system for distributed system using \textbf{Cassandra} and \textbf{MongoDB} written in \textbf{Java} and \textbf{C++}.
+  \item Deployed in China Telecom's \textbf{Kafka} cluster, detected \textbf{anomaly} in disk capacity and memory, improved \textbf{capacity planning}.
+\end{itemize}
+
+% TODO: ts parallel
 
 \section{Skills}
 \begin{tabular}{ l l }
- Language &  Go, Java, JavaScript, PHP, Python, C++, Shell\\
- Database & Cassandra, Solr, MySQL, MongoDB, Redis, Elasticsearch, KairosDB, OpenTSDB, InfluxDB, Prometheus\\
+ Language &  Go, Java, JavaScript, TypeScript, PHP, Python, SQL, C++, Shell\\
+ Database & Cassandra, Solr, MySQL, MongoDB, Redis, Elasticsearch, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite\\
  DevOps & Docker, Vagrant, Ansible\\
- Framework & Laravel, Spring, Dropwizard, Express, Rails
+ Framework & Angular, Laravel, Spring, Dropwizard, Express, Rails, CUDA, Aurora
 \end{tabular}
 
 % TODO: change this to single liner, no one cares about the time and duration for the projects ....
 % \section{Project}
-
-% \datedsubsection{Xephon-B: Time series database benchmark suite: Project Leader}{UC Santa Cruz \textit{Oct. 2016 -- Present}}
-% \begin{itemize}
-% \item \url{https://github.com/xephonhq/xephon-b} is a benchmark suite for distributed time series databases.
-% \item Using \textbf{Golang} to generate load and using \textbf{Docker} to setup test databases.
-% \item Using Golang to generate load and using Docker and Mesos to setup test database clusters on AWS.
-% \item Using \textbf{time series datbase} to store benchmark result and visualize using RESTful API and \textbf{D3.js}
-% \item A platform where developers and vendors can share and compare benchmark result vertically and horizontally.
-% \end{itemize}
-
-% \section{Software \& Frameworks}
-% \begin{tabular}{ l l }
-%  Experienced & Git, Angular, Vagrant, Ansible, Dropwizard, Laravel, Express, jQuery, BootStrap, ANTLR\\
-%  Intermediate & Docker, MySQL, Redis, Hadoop, MongoDB, ElasticSearch, Rails, Spring, ASP.NET, D3.js, React \\
-%  Basic & Cassandra, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite, Kafka, HBase, Hive, Netty, Spark
-% \end{tabular}
 
 \end{document}
