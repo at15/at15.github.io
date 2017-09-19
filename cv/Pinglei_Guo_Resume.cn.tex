@@ -2,13 +2,18 @@
 \usepackage{enumitem}
 % \setlist{nosep}
 
-% NOTE: download and install font https://github.com/billryan/resume/tree/zh_CN/fonts
+% NOTE: download and install font
+% https://github.com/billryan/resume/tree/zh_CN/fonts
+% https://github.com/adobe-fonts/source-han-serif/tree/release
+% install SourceHanSerifSC-ExtraLight.otf
+% TODO: use SourceHanSerif for all
 \usepackage{xeCJK}
 \setCJKmainfont[
 BoldFont=Adobe Heiti Std,
 ItalicFont=Adobe Kaiti Std,
 SmallCapsFont=Adobe Heiti Std
-]{Adobe Song Std}
+]{Source Han Serif SC}
+% Adobe Song Std
 
 \begin{document}
 
@@ -50,8 +55,7 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 \begin{itemize}
   \item 管理10人的网页端和移动应用开发团队，在3个月内重构已有2万用户的校内活动报名平台\href{https://tongqu.me}{同去网} \href{https://tongqu.me}{tongqu.me}。
   \item 使用 \textbf{Redis} 作为缓存和流量限制器，提高了 120\% 的响应速度，减少了 40\% 的 MySQL 负载，过滤机器人流量。
-  \item 使用 \textbf{AngularJS} 重构了基于 \textbf{jQuery} 的代码，开发了静态资源管理和加载工具。
-  % \item Refactored \textbf{jQuery} codebase using \textbf{AngularJS}, optimized assets loading.
+  \item 使用 \textbf{AngularJS} 重构了基于 \textbf{jQuery} 的代码，开发了静态资源管理和加载工具，提高了首页 60\% 的加载速度。
 \end{itemize}
 
 \section{项目经历}
