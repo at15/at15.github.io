@@ -1,5 +1,7 @@
 *.aux
 *.log
 *.out
-original.pdf
-# resume.pdf
+
+# ignore cn version for now
+# *.cn.tex
+# *.cn.pdf

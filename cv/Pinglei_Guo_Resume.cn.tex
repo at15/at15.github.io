@@ -1,0 +1,92 @@
+\documentclass[11pt, letterpaper]{simple-cv}
+\usepackage{enumitem}
+% \setlist{nosep}
+
+% NOTE: download and install font https://github.com/billryan/resume/tree/zh_CN/fonts
+\usepackage{xeCJK}
+\setCJKmainfont[
+BoldFont=Adobe Heiti Std,
+ItalicFont=Adobe Kaiti Std,
+SmallCapsFont=Adobe Heiti Std
+]{Adobe Song Std}
+
+\begin{document}
+
+\name{郭平雷}
+% TODO: put into two lines, address + phone, and the rest
+\centerline{
+圣克鲁兹，加利福尼亚\ \
+831-295-1214\ \
+}
+\centerline{
+Email: \href{mailto:piguo@ucsc.edu}{piguo@ucsc.edu}\ \
+% \href{https://at15.github.io}{at15.github.io}\ \
+GitHub: \href{https://github.com/at15}{https://github.com/at15}\ \
+Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/at1510086}}
+
+\section{教育经历}
+% FIXED: too much space between educations
+% FIXME: Package hyperref Warning: Token not allowed in a PDF string (Unicode) , caused by use \quad
+\datedsubsection{硕士 计算机科学\quad 加利福尼亚大学圣克鲁兹分校 \quad \ GPA 4.0}{2016 年 9 月 -- 2018 年 3 月}
+% Courses: Distributed systems, Database Systems, Storage System
+\datedsubsection{本科 材料科学 \quad 上海交通大学 \qquad  \qquad  \qquad \qquad \quad GPA 3.3}{2012 年 9 月 -- 2016 年 6 月}
+
+\section{工作经历}
+
+\datedsubsection{PayPal: 软件工程师实习}{圣何塞, 加利福尼亚 \quad 2017 年 6 月  - 2017 年 9 月}
+\begin{itemize}
+  \item 使用 \textbf{Go} 语言构建内部\textbf{容器编排平台} API 网关，已部署在生产环境的 \textbf{Mesos} 集群中。
+  \item 使用 \textbf{Angular 4} 重构管理面板， 用于管理 Java, Node 应用和集群本身。
+  \item 加入基于 \textbf{Solr} 的全文检索，开发并\textbf{开源}了性能更好以及支持 SolrCloud 的 Go 语言客户端。
+  \item 完善了基于 \textbf{Jenkins} 和 \textbf{Docker} 的持续集成 (\textbf{CI}) 和持续交付 (\textbf{CD}) 工具流。
+\end{itemize}
+
+\datedsubsection{GitCafe: 软件工程师实习}{上海 \quad 2015 年 1 月 -- 2015 年 3 月}
+\begin{itemize}
+  \item 优化 \textbf{Ruby on Rails} 应用加载速度，改进 markdown 解析器以支持更多语法格式。修复用户付费订阅逻辑。
+\end{itemize}
+
+\datedsubsection{东岳网络工作室: 全栈工程师 \& 工作室负责人}{上海 \quad 2013 年 9 月 -- 2016 年 1 月}
+\begin{itemize}
+  \item 管理10人的网页端和移动应用开发团队，在3个月内重构已有2万用户的校内活动报名平台\href{https://tongqu.me}{同去网} \href{https://tongqu.me}{tongqu.me}。
+  \item 使用 \textbf{Redis} 作为缓存和流量限制器，提高了 120\% 的响应速度，减少了 40\% 的 MySQL 负载，过滤机器人流量。
+  \item 使用 \textbf{AngularJS} 重构了基于 \textbf{jQuery} 的代码，开发了静态资源管理和加载工具。
+  % \item Refactored \textbf{jQuery} codebase using \textbf{AngularJS}, optimized assets loading.
+\end{itemize}
+
+\section{项目经历}
+
+\datedsubsection{\textbf{分布式时间序列数据库} \quad \href{https://github.com/xephonhq/xephon-k}{github.com/xephonhq/xephon-k}}{UCSC \quad 2016 年 11 月 -- 今}
+
+% \href{https://github.com/xephonhq/xephon-k}{https://github.com/xephonhq/xephon-k}
+
+\begin{itemize}
+  \item 基于 \textbf{Cassandra} 使用 \textbf{Go} 语言实现， 支持 \textbf{JSON} 和 \textbf{Protobuf} 格式，使用 HTTP/2 协议。
+  \item 设计了专用于时间序列数据存储的列存储格式，相对于 \textbf{Parquet} 和 \textbf{InfluxDB} 有更高的压缩率和更少的写放大。
+  \item 创建了\textbf{压力测试集}，支持 Xephon-K, OpenTSDB, KariosDB, InfluxDB，并开发了通用的时间序列数据库客户端。
+\end{itemize}
+
+\datedsubsection{GPU 加速的时间序列数据处理 \quad \href{https://github.com/at15/ts-parallel}{github.com/at15/ts-parallel}}{UCSC \quad 2017 年 4 月 -- 2017 年 6 月}
+
+\begin{itemize}
+  \item 扩展了 GPU 计算框架的\textbf{压力测试集}，支持基于 CUDA 和 OpenCL 的 Thrust, Boost, ArrayFire。
+  \item 在 CPU 和 GPU 上实现并对比了对多维时间序列数据的 OLAP 查询，如 top-K, group by。
+  \item 实现了纯内存的列存储原型，使用行程压缩和字典压缩，对于规律的时间序列数据减少 90\% 的内存使用量。
+\end{itemize}
+
+\datedsubsection{分布式监控系统原型}{上海交通大学 \quad 2015 年 3 月-- 2016 年 1 月}
+
+\begin{itemize}
+  \item 基于 \textbf{Cassandra} 和 \textbf{MongoDB} 使用 \textbf{Java} and \textbf{C++} 实现，包含数据收集和异常检测的功能。
+  \item 部署在中国电信的 \textbf{Kafka} 集群，检测到硬盘和内存使用\textbf{异常}。优化了\textbf{资源配置}和\textbf{预算管理}。
+\end{itemize}
+
+\section{技能}
+\begin{tabular}{ l l }
+ 语言 &  Go, Java, JavaScript, TypeScript, PHP, Python, SQL, C++, Shell\\
+ 数据库 & Cassandra, Solr, MySQL, MongoDB, Redis, Elasticsearch, KairosDB, OpenTSDB, InfluxDB, Graphite\\
+ 运维 & Docker, Vagrant, Ansible, Mesos\\
+ 框架 & Angular, Laravel, Spring, Dropwizard, Express, Rails, CUDA
+\end{tabular}
+
+\end{document}
