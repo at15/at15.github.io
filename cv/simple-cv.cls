@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{simple-cv}[2016/10/28 at15's custom CV class]
 % based on https://www.sharelatex.com/blog/2011/03/27/how-to-write-a-latex-class-file-and-design-your-own-cv.html
-\LoadClass{article}
+\LoadClass[20pt]{article}
 \RequirePackage{titlesec}
 \RequirePackage{geometry}
 \RequirePackage[hidelinks,unicode]{hyperref}
@@ -14,15 +14,15 @@
 
 % switch off page number
 \pagenumbering{gobble}
-\geometry{left=1.3cm, top=0.5cm, right=1.3cm, bottom=2.0cm, footskip=.5cm}
+\geometry{left=1.3cm, top=1.0cm, right=1.3cm, bottom=1.0cm, footskip=.5cm}
 
 \newcommand{\name}[1]{
   \centerline{\Large{#1}}
 }
 
 % reduce subsection spacing https://tex.stackexchange.com/questions/53338/reducing-spacing-after-headings
-% \titlespacing{\section}{0pt}{\parskip}{-\parskip}
-% \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\titlespacing{\subsection}{0pt}{4pt}{4pt}
 
 
 \titleformat{\section}         % Customise the \section command
@@ -41,7 +41,7 @@
   {\raggedright}
   {}{0em}
   {}
-  
+
 \newcommand{\datedsubsection}[2]{%
   \subsection[#1]{#1 \hfill #2}%
 }

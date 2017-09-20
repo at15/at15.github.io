@@ -1,9 +1,9 @@
-\documentclass[11pt, letterpaper]{simple-cv}
+\documentclass{simple-cv}
 % to use times new roman https://tex.stackexchange.com/questions/153168/how-to-set-document-font-to-times-new-roman-by-command
 \usepackage{mathptmx}
-\usepackage{enumitem}
-\setlist{noitemsep}
-% \setlist{nosep}
+\usepackage{enumitem} % https://tex.stackexchange.com/questions/10684/vertical-space-in-lists
+% \setlist{noitemsep}
+\setlist{nosep}
 
 \begin{document}
 
@@ -30,6 +30,7 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 
 \datedsubsection{PayPal: Software Engineer Intern}{San Jose, California \quad June 2017 - Sep. 2017}
 \begin{itemize}
+  % \itemsep0em
   \item Built API gateway for internal \textbf{container orchestration} platform using \textbf{Go}. Deployed in \textbf{production} on \textbf{Mesos} using \textbf{Docker}.
   \item Enhanced dashboard using \textbf{Angular 4}, used by operation team to troubleshoot Java, Node application and manage cluster itself.
   \item Introduced full text search using \textbf{Solr}, wrote and \textbf{open sourced} Go client with enhanced performance and SolrCloud support.
@@ -38,13 +39,15 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 
 \datedsubsection{GitCafe: Software Engineer Intern}{Shanghai, China \quad Jan. 2015 -- Mar. 2015}
 \begin{itemize}
+  % \setlength\itemsep{0.1em}
   \item Reduced \textbf{Ruby on Rails} application load time by 5\% through optimizing regular expression in markdown parser.
   \item Fixed user subsubcription logic, solved 20\% pricing related user tickets.
 \end{itemize}
 
 \datedsubsection{Dongyue Web Studio: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad Sep. 2013 -- Jan. 2016}
 \begin{itemize}
-  \item Led web and mobile team. Built online ticket booking application \href{https://tongqu.me}{\textbf{tongqu.me}} used by 20,000 students in campus.
+  % \setlength\itemsep{0.1em}
+  \item Led web and mobile team. Refactored online ticket booking application \href{https://tongqu.me}{\textbf{tongqu.me}} in 3 month, used by 20,000 students .
   \item Built high traffic website and REST API using \textbf{PHP} and \textbf{MySQL}, reduced database contention using job queue and cache.
   \item Utilized \textbf{Redis} as cache and rate limiter, increased QPS by 120\%, reduced database load by 40\%, filtered out most bot traffic.
   \item Refactored \textbf{jQuery} codebase using \textbf{AngularJS}, increased homepage loading speed by 60\% using Ajax and pre-render.
@@ -57,6 +60,7 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 % \href{https://github.com/xephonhq/xephon-k}{https://github.com/xephonhq/xephon-k}
 
 \begin{itemize}
+  % \setlength\itemsep{0.1em}
   \item Implemented a distributed time series database on top of \textbf{Cassandra} in \textbf{Go}. Support both \textbf{JSON} and \textbf{Protobuf} via HTTP/2.
   \item Designed a \textbf{columnar format} modeled after \textbf{Parquet} and \textbf{InfluxDB} with higher compression and less write amplification.
   \item Created \textbf{benchmark suite} for Xephon-K, OpenTSDB, KariosDB, InfluxDB and a consistent client interface for different TSDB.
@@ -65,6 +69,7 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 \datedsubsection{GPU accelerated in-memory time series processing \quad \href{https://github.com/at15/ts-parallel}{github.com/at15/ts-parallel}}{UCSC \quad Apr. 2017 -- June 2017}
 
 \begin{itemize}
+  % \setlength\itemsep{0.1em}
   \item Expanded \textbf{benchmark suite} for different \textbf{C++} GPU computing framework on \textbf{CUDA} and OpenCL, Thrust, Boost, ArrayFire.
   \item Implemented OLAP queries like top-K, group by for multi dimensional time series data on both CPU and GPU backends.
   \item Initiated a in memory \textbf{column store} with run length and dictionary encoding, saved 90\% space for regular time series data.
@@ -73,6 +78,7 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 \datedsubsection{Distributed systems monitoring prototype}{Shanghai Jiao Tong University \quad Mar. 2015 -- Jan. 2016}
 
 \begin{itemize}
+  % \setlength\itemsep{0.1em}
   \item Enhanced monitoring system for distributed system using \textbf{Cassandra} and \textbf{MongoDB} written in \textbf{Java} and \textbf{C++}.
   \item Deployed in China Telecom's \textbf{Kafka} cluster, detected \textbf{anomaly} in disk and memory usage, improved \textbf{capacity planning}.
 \end{itemize}
@@ -80,8 +86,9 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 \datedsubsection{B+ index for Hive}{Shanghai Jiao Tong University \quad Nov. 2015 - Jan. 2016}
 
 \begin{itemize}
-    \item Implemented B+ index for \textbf{Hive}, index is generated using \textbf{MapReduce} and stored in \textbf{HDFS}.
-    \item Accelerated point and range query using in memory LRU cache, supporting external cache like \textbf{Memcached} and \textbf{Redis}.
+  % \setlength\itemsep{0.1em}
+  \item Implemented B+ index for \textbf{Hive}, index is generated using \textbf{MapReduce} and stored in \textbf{HDFS}.
+  \item Accelerated point and range query using in memory LRU cache, supporting external cache like \textbf{Memcached} and \textbf{Redis}.
 \end{itemize}
 
 % TODO: gommon
