@@ -1,7 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{simple-cv}[2016/10/28 at15's custom CV class]
 % based on https://www.sharelatex.com/blog/2011/03/27/how-to-write-a-latex-class-file-and-design-your-own-cv.html
-\LoadClass[20pt]{article}
+% https://tex.stackexchange.com/questions/9908/difference-between-loadclass-and-loadclasswithoptions
+\LoadClassWithOptions{article}
+% \LoadClass[12pt]{article}
 \RequirePackage{titlesec}
 \RequirePackage{geometry}
 \RequirePackage[hidelinks,unicode]{hyperref}
@@ -14,7 +16,7 @@
 
 % switch off page number
 \pagenumbering{gobble}
-\geometry{left=1.3cm, top=1.0cm, right=1.3cm, bottom=1.0cm, footskip=.5cm}
+\geometry{left=1.0cm, top=1.0cm, right=1.0cm, bottom=1.0cm, footskip=.5cm}
 
 \newcommand{\name}[1]{
   \centerline{\Large{#1}}
@@ -44,12 +46,4 @@
 
 \newcommand{\datedsubsection}[2]{%
   \subsection[#1]{#1 \hfill #2}%
-}
-
-\newcommand{\workitems}[3]{
-    \begin{itemize}
-    \item #1
-    \item #2
-    \item #3
-    \end{itemize}
 }

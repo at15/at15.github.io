@@ -1,9 +1,10 @@
-\documentclass{simple-cv}
+\documentclass[11pt, letterpaper]{simple-cv}
 % to use times new roman https://tex.stackexchange.com/questions/153168/how-to-set-document-font-to-times-new-roman-by-command
 \usepackage{mathptmx}
 \usepackage{enumitem} % https://tex.stackexchange.com/questions/10684/vertical-space-in-lists
-% \setlist{noitemsep}
-\setlist{nosep}
+\setlist{noitemsep}
+% \setlist{nosep}
+\setlist[itemize]{leftmargin=*} % https://tex.stackexchange.com/questions/91124/itemize-removing-natural-indent
 
 \begin{document}
 
@@ -31,10 +32,10 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 \datedsubsection{PayPal: Software Engineer Intern}{San Jose, California \quad June 2017 - Sep. 2017}
 \begin{itemize}
   % \itemsep0em
-  \item Built API gateway for internal \textbf{container orchestration} platform using \textbf{Go}. Deployed in \textbf{production} on \textbf{Mesos} using \textbf{Docker}.
-  \item Enhanced dashboard using \textbf{Angular 4}, used by operation team to troubleshoot Java, Node application and manage cluster itself.
+  \item Built API gateway for internal \textbf{container orchestration} platform using \textbf{Go}. Deployed in production on \textbf{Mesos} using \textbf{Docker}.
+  \item Enhanced dashboard using \textbf{Angular 4}, used by operation team to troubleshoot Java, Node app and manage cluster itself.
   \item Introduced full text search using \textbf{Solr}, wrote and \textbf{open sourced} Go client with enhanced performance and SolrCloud support.
-  \item Furthered continuous integration (\textbf{CI}) and deployment (\textbf{CD}) pipeline using \textbf{Jenkins} and \textbf{Docker}.
+  \item Furthered continuous integration (CI) and deployment (CD) pipeline using Jenkins and Docker.
 \end{itemize}
 
 \datedsubsection{GitCafe: Software Engineer Intern}{Shanghai, China \quad Jan. 2015 -- Mar. 2015}
@@ -47,10 +48,10 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 \datedsubsection{Dongyue Web Studio: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad Sep. 2013 -- Jan. 2016}
 \begin{itemize}
   % \setlength\itemsep{0.1em}
-  \item Led web and mobile team. Refactored online ticket booking application \href{https://tongqu.me}{\textbf{tongqu.me}} in 3 month, used by 20,000 students .
+  \item Led web and mobile team. Refactored online ticket booking application \href{https://tongqu.me}{tongqu.me} in 3 month, used by 20,000 students .
   \item Built high traffic website and REST API using \textbf{PHP} and \textbf{MySQL}, reduced database contention using job queue and cache.
   \item Utilized \textbf{Redis} as cache and rate limiter, increased QPS by 120\%, reduced database load by 40\%, filtered out most bot traffic.
-  \item Refactored \textbf{jQuery} codebase using \textbf{AngularJS}, increased homepage loading speed by 60\% using Ajax and pre-render.
+  \item Refactored jQuery codebase using AngularJS, increased homepage loading speed by 60\% using Ajax and pre-render.
 \end{itemize}
 
 \section{Project Experience}
@@ -61,44 +62,48 @@ Linkedin: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 
 \begin{itemize}
   % \setlength\itemsep{0.1em}
-  \item Implemented a distributed time series database on top of \textbf{Cassandra} in \textbf{Go}. Support both \textbf{JSON} and \textbf{Protobuf} via HTTP/2.
-  \item Designed a \textbf{columnar format} modeled after \textbf{Parquet} and \textbf{InfluxDB} with higher compression and less write amplification.
-  \item Created \textbf{benchmark suite} for Xephon-K, OpenTSDB, KariosDB, InfluxDB and a consistent client interface for different TSDB.
+  \item Implemented a distributed time series database on top of Cassandra in Go. Support both JSON and Protobuf via HTTP/2.
+  \item Designed a columnar format modeled after Parquet and InfluxDB with higher compression and less write amplification.
+  \item Created benchmark suite for Xephon-K, OpenTSDB, KariosDB, InfluxDB and a generic client for different TSDB.
+  \item Surveyed popular TSDB design and implementation, made an interactive online report called \href{https://xephonhq.github.io/awesome-time-series-database}{awesome-time-series-database}.
 \end{itemize}
 
 \datedsubsection{GPU accelerated in-memory time series processing \quad \href{https://github.com/at15/ts-parallel}{github.com/at15/ts-parallel}}{UCSC \quad Apr. 2017 -- June 2017}
 
 \begin{itemize}
   % \setlength\itemsep{0.1em}
-  \item Expanded \textbf{benchmark suite} for different \textbf{C++} GPU computing framework on \textbf{CUDA} and OpenCL, Thrust, Boost, ArrayFire.
+  \item Expanded benchmark suite for different C++ GPU computing framework on CUDA and OpenCL, Thrust, Boost, ArrayFire.
   \item Implemented OLAP queries like top-K, group by for multi dimensional time series data on both CPU and GPU backends.
-  \item Initiated a in memory \textbf{column store} with run length and dictionary encoding, saved 90\% space for regular time series data.
+  \item Initiated a in memory column store with run length and dictionary encoding, saved 90\% space for regular time series data.
 \end{itemize}
 
 \datedsubsection{Distributed systems monitoring prototype}{Shanghai Jiao Tong University \quad Mar. 2015 -- Jan. 2016}
 
 \begin{itemize}
   % \setlength\itemsep{0.1em}
-  \item Enhanced monitoring system for distributed system using \textbf{Cassandra} and \textbf{MongoDB} written in \textbf{Java} and \textbf{C++}.
-  \item Deployed in China Telecom's \textbf{Kafka} cluster, detected \textbf{anomaly} in disk and memory usage, improved \textbf{capacity planning}.
+  \item Enhanced monitoring system for distributed system using Cassandra and MongoDB written in Java and C++.
+  \item Deployed in China Telecom's Kafka cluster, detected anomaly in disk and memory usage, improved capacity planning.
 \end{itemize}
 
 \datedsubsection{B+ index for Hive}{Shanghai Jiao Tong University \quad Nov. 2015 - Jan. 2016}
 
 \begin{itemize}
   % \setlength\itemsep{0.1em}
-  \item Implemented B+ index for \textbf{Hive}, index is generated using \textbf{MapReduce} and stored in \textbf{HDFS}.
-  \item Accelerated point and range query using in memory LRU cache, supporting external cache like \textbf{Memcached} and \textbf{Redis}.
+  \item Implemented B+ index for Hive, index is generated using MapReduce and stored in HDFS.
+  \item Accelerated point and range query using in memory LRU cache, supporting external cache like Memcached and Redis.
 \end{itemize}
 
 % TODO: gommon
 
 \section{Skills}
-\begin{tabular}{ l l }
+% https://tex.stackexchange.com/questions/16258/how-can-the-margins-around-a-table-set-to-0pt
+\begin{flushleft}
+\begin{tabular}{@{}ll@{}}
  Language &  Go, Java, PHP, JavaScript, TypeScript, Python, SQL, C++, Scala, Shell\\
  Database & Cassandra, Solr, MySQL, MongoDB, Redis, Elasticsearch, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite\\
  DevOps & Docker, Vagrant, Ansible, Mesos, Aurora\\
  Framework & Angular, Laravel, Spring, Dropwizard, Express, Rails, CUDA, Hadoop
 \end{tabular}
+\end{flushleft}
 
 \end{document}
