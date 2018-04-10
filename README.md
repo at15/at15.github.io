@@ -1,19 +1,18 @@
 # at15.github.io
-All about at15, please go https://at15.github.io
+
+Personal website https://at15.github.io and Resume
 
 ## Usage
 
-In case you want to use this as your personal website and cv template.
-Note the latex template is a lot different from the original one.
+In case you want to use this repo as start point for your personal website and/or resume template.
 
-### The easy way
+### Website
 
-- install texlive 2016
-- run `xelatex at15.en.tex`
+- it is based on http://jgthms.com/web-design-in-4-minutes only `index.html` and `assets/common.css` is needed
 
-### The hard way
+### Resume latex template
 
-- install texlive 2016
-- install golang environment
-- clone and build Ayi binary. https://github.com/dyweb/Ayi#from-source
-- in `cv` folder run `Ayi run build`
+- install [Tex Live](https://www.tug.org/texlive/)
+- copy `simple-cv.cls` and `Pinglei_Guo_Resume.tex` in `cv` folder to same folder
+- rename `Pinglei_Guo_Resume.tex` to `Your_Name_Resume.tex`
+- `xelatex Your_Name_Resume.tex`
