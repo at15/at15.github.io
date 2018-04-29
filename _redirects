@@ -1,0 +1,3 @@
+# https://yihui.name/en/2017/11/301-redirect/
+# https://www.netlify.com/docs/redirects/#splats
+http://at15.me/*    https://at15.me/:splat  301!
