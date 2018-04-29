@@ -2,6 +2,6 @@
 *.log
 *.out
 
-# ignore cn version for now
-# *.cn.tex
-# *.cn.pdf
+# file generated in newer version of latex
+*.fdb_latexmk
+*.fls

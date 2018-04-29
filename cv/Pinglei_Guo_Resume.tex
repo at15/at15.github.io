@@ -1,4 +1,7 @@
 \documentclass[11pt, letterpaper]{simple-cv}
+% https://github.com/at15/at15.github.io/issues/10 to solve LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+% https://tex.stackexchange.com/questions/358261/latex-font-warning-after-updating-to-texlive-2016/
+\usepackage[OT1]{fontenc} 
 % to use times new roman https://tex.stackexchange.com/questions/153168/how-to-set-document-font-to-times-new-roman-by-command
 \usepackage{mathptmx}
 \usepackage{enumitem} % https://tex.stackexchange.com/questions/10684/vertical-space-in-lists
@@ -15,12 +18,18 @@ Santa Cruz, CA\ \
 831-295-1214\ \
 }
 \centerline{
-Email: \href{mailto:piguo@ucsc.edu}{piguo@ucsc.edu}\ \
+Email: \href{plguo002@gmail.com}{plguo002@gmail.com}\ \
 % \href{https://at15.github.io}{at15.github.io}\ \
 GitHub: \href{https://github.com/at15}{https://github.com/at15}\ \
 LinkedIn: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/at1510086}}
 
 \section{Work Experience}
+
+\datedsubsection{\textbf{PayPal}: Software Engineer 2}{San Jose, CA \quad May 2018 - Present \quad}
+\begin{itemize}
+  % \itemsep0em
+  \item Working on internal container orchestration platform using Mesos, Aurora and Docker.
+\end{itemize}
 
 \datedsubsection{\textbf{PayPal}: Software Engineer Intern - Admin Server \& Dashboard in Go}{San Jose, CA \quad June 2017 - Sep. 2017}
 \begin{itemize}
@@ -28,7 +37,7 @@ LinkedIn: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
   \item Built API gateway for internal \textbf{container orchestration} platform using \textbf{Go}. Deployed in production on \textbf{Mesos} using \textbf{Docker}.
   \item Enhanced dashboard using \textbf{Angular 4}, used by operation team to troubleshoot Java, Node app and manage cluster itself.
   \item Introduced full text search using \textbf{Solr}, wrote and \textbf{open sourced} Go client with enhanced performance and SolrCloud support.
-  \item Furthered continuous integration (CI) and deployment (CD) pipeline using Jenkins and Docker.
+  % \item Furthered continuous integration (CI) and deployment (CD) pipeline using Jenkins and Docker.
 \end{itemize}
 
 \datedsubsection{GitCafe: Software Engineer Intern}{Shanghai, China \quad Jan. 2015 -- Mar. 2015}
@@ -49,6 +58,17 @@ LinkedIn: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 
 \section{Project Experience}
 
+\datedsubsection{\textbf{Distributed database benchmark framework} \quad \href{https://github.com/benchhub}{github.com/benchhub}}{UCSC \quad Nov. 2017 -- Present}
+
+% \href{https://github.com/xephonhq/xephon-k}{https://github.com/xephonhq/xephon-k}
+
+\begin{itemize}
+  % \setlength\itemsep{0.1em}
+  \item Designed a specification for running distributed database benchmark.
+  \item Built a scheduler to run distributed database and workload generators.
+  \item Stored benchmark results in time series databases and relation databases.
+\end{itemize}
+
 \datedsubsection{\textbf{Distributed Time Series Database} \quad \href{https://github.com/xephonhq/xephon-k}{github.com/xephonhq/xephon-k}}{UCSC \quad Nov. 2016 -- Present}
 
 % \href{https://github.com/xephonhq/xephon-k}{https://github.com/xephonhq/xephon-k}
@@ -61,16 +81,16 @@ LinkedIn: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
   \item Surveyed popular TSDB design and implementation, made an interactive online report called \href{https://xephonhq.github.io/awesome-time-series-database}{awesome-time-series-database}.
 \end{itemize}
 
-\datedsubsection{\textbf{GPU accelerated in-memory} time series processing \quad \href{https://github.com/at15/ts-parallel}{github.com/at15/ts-parallel}}{UCSC \quad Apr. 2017 -- June 2017}
+\datedsubsection{\textbf{GPU accelerated in-memory time series processing} \quad \href{https://github.com/at15/ts-parallel}{github.com/at15/ts-parallel}}{UCSC \quad Apr. 2017 -- June 2017}
 
 \begin{itemize}
   % \setlength\itemsep{0.1em}
   \item Expanded benchmark suite for different C++ GPU computing framework on CUDA and OpenCL, Thrust, Boost, ArrayFire.
   \item Implemented OLAP queries like top-K, group by for multi dimensional time series data on both CPU and GPU backends.
-  \item Initiated a in memory column store with run length and dictionary encoding, saved 90\% space for regular time series data.
+  % \item Initiated a in memory column store with run length and dictionary encoding, saved 90\% space for regular time series data.
 \end{itemize}
 
-\datedsubsection{\textbf{Distributed systems monitoring} prototype}{Shanghai Jiao Tong University \quad Mar. 2015 -- Jan. 2016}
+\datedsubsection{\textbf{Distributed systems monitoring prototype}}{Shanghai Jiao Tong University \quad Mar. 2015 -- Jan. 2016}
 
 \begin{itemize}
   % \setlength\itemsep{0.1em}
@@ -78,13 +98,13 @@ LinkedIn: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
   \item Deployed in China Telecom's Kafka cluster, detected anomaly in disk and memory usage, improved capacity planning.
 \end{itemize}
 
-\datedsubsection{B+ index for \textbf{Hive}}{Shanghai Jiao Tong University \quad Nov. 2015 - Jan. 2016}
+% \datedsubsection{B+ index for \textbf{Hive}}{Shanghai Jiao Tong University \quad Nov. 2015 - Jan. 2016}
 
-\begin{itemize}
-  % \setlength\itemsep{0.1em}
-  \item Implemented B+ index for Hive, index is generated using MapReduce and stored in HDFS.
-  \item Accelerated point and range query using in memory LRU cache, supporting external cache like Memcached and Redis.
-\end{itemize}
+% \begin{itemize}
+%   % \setlength\itemsep{0.1em}
+%   \item Implemented B+ index for Hive, index is generated using MapReduce and stored in HDFS.
+%   \item Accelerated point and range query using in memory LRU cache, supporting external cache like Memcached and Redis.
+% \end{itemize}
 
 % TODO: gommon
 
@@ -99,9 +119,9 @@ LinkedIn: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/a
 % https://tex.stackexchange.com/questions/16258/how-can-the-margins-around-a-table-set-to-0pt
 \begin{flushleft}
 \begin{tabular}{@{}ll@{}}
- Language &  Go, Java, PHP, JavaScript, TypeScript, Python, SQL, C++, Scala, Shell\\
- Database & Cassandra, Solr, MySQL, MongoDB, Redis, Elasticsearch, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite\\
- DevOps & Docker, Vagrant, Ansible, Mesos, Aurora\\
+ Language &  Go, Java, C++, JavaScript, Python, SQL, PHP, Shell\\
+ Database & Cassandra, MySQL, Elasticsearch, MongoDB, Redis, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite\\
+ DevOps & Docker, Kubernetes, Mesos, Aurora\\
  Framework & Angular, Laravel, Spring, Dropwizard, Express, Rails, CUDA, Hadoop
 \end{tabular}
 \end{flushleft}
