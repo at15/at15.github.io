@@ -2,19 +2,18 @@
 
 ## Usage
 
-- `Ayi run build`
-- `Ayi run clean`
+````bash
+make build
+make build-cn
+````
 
-see [.ayi.yml](.ayi.yml) for detail
+Install Chinese font
 
-## Template
+- [x] https://github.com/adobe-fonts/source-han-serif
+  - https://github.com/adobe-fonts/source-han-serif/raw/release/SubsetOTF/SourceHanSerifCN.zip seems to be the one
+  - it has 7 different weights, I installed Regular, forgot what I installed previously
 
-Two columns curriculum vitae from https://github.com/ntd/tccv
+## Known issues
 
-## Acknowledgement
-
-from https://github.com/ntd/tccv/blob/master/THANKS
-
-- Joshua Klein <klein.joshua.a@gmail.com>
-- Alessandro Surace <zioalex@gmail.com>
-- Johannes Böttcher <johannesbottcher@gmail.com>
+- when using vscode latex plugin, the Chinese version will break, `make build-cn` works fine
+- the Chinese version does not have bold for Chinese characters

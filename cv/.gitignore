@@ -5,3 +5,5 @@
 # file generated in newer version of latex
 *.fdb_latexmk
 *.fls
+# this file seems only appears when there is an build error, otherwise it is deleted after build finished
+*.synctex.gz

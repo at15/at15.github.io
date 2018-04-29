@@ -5,6 +5,6 @@ build:
 	cp Pinglei_Guo_Resume.pdf at15.en.pdf
 
 .PHONY: build-cn
-buildcn:
+build-cn:
 	xelatex Pinglei_Guo_Resume.cn.tex
 	
