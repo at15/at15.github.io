@@ -8,3 +8,6 @@ build:
 build-cn:
 	xelatex Pinglei_Guo_Resume.cn.tex
 	
+.PHONY: clean
+clean:
+	rm -f *.aux *.log *.out
