@@ -14,7 +14,7 @@
 \name{Pinglei Guo}
 % TODO: put into two lines, address + phone, and the rest
 \centerline{
-	Santa Cruz, CA\ \
+	San Jose, CA\ \
 	831-295-1214\ \
 }
 \centerline{
@@ -25,27 +25,31 @@
 
 \section{Work Experience}
 
-\datedsubsection{\textbf{PayPal}: Software Engineer 2}{San Jose, CA \quad May 2018 - Present \quad}
+\datedsubsection{\textbf{PayPal}: Software Engineer 2 - Container Orchestration system in Go}{San Jose, CA \quad May 2018 - Present \quad}
 \begin{itemize}
 	% \itemsep0em
-	\item Working on internal container orchestration platform using Mesos, Aurora and Docker.
+	\item Working on internal multi data center container orchestration platform using Apache Mesos, Aurora and Docker.
+	\item Introduced new deploy strategy and implemented dynamic internal system check during deploy.
+	\item Fixed race condition during deploy by merging user and internal events in state machine.
+	\item Built REST API and cli tools in Go for collecting log and metrics along with distributed tracing.
 \end{itemize}
 
 \datedsubsection{\textbf{PayPal}: Software Engineer Intern - Admin Server \& Dashboard in Go}{San Jose, CA \quad June 2017 - Sep. 2017}
 \begin{itemize}
 	% \itemsep0em
-	\item Built API gateway for internal \textbf{container orchestration} platform using \textbf{Go}. Deployed in production on \textbf{Mesos} using \textbf{Docker}.
-	\item Enhanced dashboard using \textbf{Angular 4}, used by operation team to troubleshoot Java, Node app and manage cluster itself.
-	\item Introduced full text search using \textbf{Solr}, wrote and \textbf{open sourced} Go client with enhanced performance and SolrCloud support.
-	      % \item Furthered continuous integration (CI) and deployment (CD) pipeline using Jenkins and Docker.
+	\item Built API gateway with RBAC for internal container orchestration platform using Go.
+	\item Enhanced dashboard using Angular 4, used by operation team to troubleshoot Java, Node app and manage cluster itself.
+	\item Introduced full text search using Apache Solr, wrote an open sourced Go client with cleaner API. % well, no longer maintained
+	      % \item Furthered continuous integration (CI) and deployment (CD) pipeline using Jenkins and Docker. % I hate jenkins in PayPal ...
 \end{itemize}
 
-\datedsubsection{GitCafe: Software Engineer Intern}{Shanghai, China \quad Jan. 2015 -- Mar. 2015}
-\begin{itemize}
-	% \setlength\itemsep{0.1em}
-	\item Reduced \textbf{Ruby on Rails} application load time by 5\% through optimizing regular expression in markdown parser.
-	\item Fixed user subsubcription logic, solved 20\% pricing related user tickets.
-\end{itemize}
+% sorry GitCafe, the space on resume is limited
+% \datedsubsection{GitCafe: Software Engineer Intern}{Shanghai, China \quad Jan. 2015 -- Mar. 2015}
+% \begin{itemize}
+% 	% \setlength\itemsep{0.1em}
+% 	\item Reduced \textbf{Ruby on Rails} application load time by 5\% through optimizing regular expression in markdown parser.
+% 	\item Fixed user subsubcription logic, solved 20\% pricing related user tickets.
+% \end{itemize}
 
 \datedsubsection{Dongyue Web Studio: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad Sep. 2013 -- Jan. 2016}
 \begin{itemize}
@@ -58,15 +62,28 @@
 
 \section{Project Experience}
 
-\datedsubsection{\textbf{Distributed database benchmark framework} \quad \href{https://github.com/benchhub}{github.com/benchhub}}{UCSC \quad Nov. 2017 -- Present}
+
+\datedsubsection{\textbf{Go util library collection} \quad \href{https://github.com/dyweb/gommon}{github.com/dyweb/gommon}}{Open Source Side Project \quad March. 2018 -- Present}
+
+% \href{https://github.com/xephonhq/xephon-k}{https://github.com/xephonhq/xephon-k}
+
+\begin{itemize}
+	% \setlength\itemsep{0.1em}
+	\item Built a high performance logging library with fine grained log level control across library dependencies
+	\item Implemented data structure missing from standard library, i.e. set, tree
+	\item Merged template rendering, static asset embedding into a single generator library as replacement for go:generate
+\end{itemize}
+
+
+\datedsubsection{\textbf{Distributed database benchmark framework} \quad \href{https://github.com/benchhub}{github.com/benchhub}}{UCSC \quad Nov. 2017 -- March. 2018}
 
 % \href{https://github.com/xephonhq/xephon-k}{https://github.com/xephonhq/xephon-k}
 
 \begin{itemize}
 	% \setlength\itemsep{0.1em}
 	\item Designed a specification for running distributed database benchmark.
-	\item Built a scheduler to run distributed database and workload generators.
-	\item Stored benchmark results in time series databases and relation databases.
+	\item Built a queue based scheduler to run distributed database and workload generators.
+	\item Stored benchmark results in time series databases and metadata in relation databases.
 \end{itemize}
 
 \datedsubsection{\textbf{Distributed Time Series Database} \quad \href{https://github.com/xephonhq/xephon-k}{github.com/xephonhq/xephon-k}}{UCSC \quad Nov. 2016 -- Present}
@@ -90,13 +107,13 @@
 	      % \item Initiated a in memory column store with run length and dictionary encoding, saved 90\% space for regular time series data.
 \end{itemize}
 
-\datedsubsection{\textbf{Distributed systems monitoring prototype}}{Shanghai Jiao Tong University \quad Mar. 2015 -- Jan. 2016}
+% \datedsubsection{\textbf{Distributed systems monitoring prototype}}{Shanghai Jiao Tong University \quad Mar. 2015 -- Jan. 2016}
 
-\begin{itemize}
-	% \setlength\itemsep{0.1em}
-	\item Enhanced monitoring system for distributed system using Cassandra and MongoDB written in Java and C++.
-	\item Deployed in China Telecom's Kafka cluster, detected anomaly in disk and memory usage, improved capacity planning.
-\end{itemize}
+% \begin{itemize}
+% 	% \setlength\itemsep{0.1em}
+% 	\item Enhanced monitoring system for distributed system using Cassandra and MongoDB written in Java and C++.
+% 	\item Deployed in China Telecom's Kafka cluster, detected anomaly in disk and memory usage, improved capacity planning.
+% \end{itemize}
 
 % \datedsubsection{B+ index for \textbf{Hive}}{Shanghai Jiao Tong University \quad Nov. 2015 - Jan. 2016}
 
@@ -119,10 +136,10 @@
 % https://tex.stackexchange.com/questions/16258/how-can-the-margins-around-a-table-set-to-0pt
 \begin{flushleft}
 	\begin{tabular}{@{}ll@{}}
-		Language  & Go, Java, C++, JavaScript, Python, SQL, PHP, Shell                                                  \\
+		Language  & Go, JavaScript, Java, C++, Python, SQL, PHP, Shell                                                  \\
 		Database  & Cassandra, MySQL, Elasticsearch, MongoDB, Redis, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite \\
 		DevOps    & Docker, Kubernetes, Mesos, Aurora                                                                   \\
-		Framework & Angular, Laravel, Spring, Dropwizard, Express, Rails, CUDA, Hadoop
+		Framework & Angular, Vue, Laravel, Spring, Dropwizard, Express, Rails, CUDA, Hadoop
 	\end{tabular}
 \end{flushleft}
 
