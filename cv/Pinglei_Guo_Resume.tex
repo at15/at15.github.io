@@ -25,13 +25,14 @@
 
 \section{Work Experience}
 
-\datedsubsection{\textbf{PayPal}: Software Engineer 2 - Container Orchestration system in Go}{San Jose, CA \quad May 2018 - Present \quad}
+\datedsubsection{\textbf{PayPal}: Software Engineer 2 - Multi cluster container orchestration platform in Go}{San Jose, CA \quad May 2018 - Present \quad}
 \begin{itemize}
 	% \itemsep0em
-	\item Working on internal multi data center container orchestration platform using Apache Mesos, Aurora and Docker.
+	\item Working on internal \textbf{multi cluster} container orchestration platform using Apache \textbf{Mesos}, Aurora and Docker.
+	\item Built prototype of container storage on top of \textbf{Kubernetes} and Mesos for stateful service like database.
+	\item Built REST API and cli tools in Go for collecting log and metrics along with \textbf{distributed tracing}.
 	\item Introduced new deploy strategy and implemented dynamic internal system check during deploy.
-	\item Fixed race condition during deploy by merging user and internal events in state machine.
-	\item Built REST API and cli tools in Go for collecting log and metrics along with distributed tracing.
+	% \item Fixed race condition during deploy by merging user and internal events in state machine.
 \end{itemize}
 
 \datedsubsection{\textbf{PayPal}: Software Engineer Intern - Admin Server \& Dashboard in Go}{San Jose, CA \quad June 2017 - Sep. 2017}
@@ -54,7 +55,7 @@
 \datedsubsection{Dongyue Web Studio: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad Sep. 2013 -- Jan. 2016}
 \begin{itemize}
 	% \setlength\itemsep{0.1em}
-	\item Led web and mobile team. Refactored online ticket booking application \href{https://tongqu.me}{tongqu.me} in 3 month, used by 20,000 students .
+	\item Led web and mobile team. Refactored online ticket booking application \href{https://tongqu.me}{tongqu.me} in 3 month, used by 10,000 students.
 	\item Built high traffic website and REST API using \textbf{PHP} and \textbf{MySQL}, reduced database contention using job queue and cache.
 	\item Utilized \textbf{Redis} as cache and rate limiter, increased QPS by 120\%, reduced database load by 40\%, filtered out most bot traffic.
 	\item Refactored jQuery codebase using AngularJS, increased homepage loading speed by 60\% using Ajax and pre-render.
@@ -63,15 +64,16 @@
 \section{Project Experience}
 
 
-\datedsubsection{\textbf{Go util library collection} \quad \href{https://github.com/dyweb/gommon}{github.com/dyweb/gommon}}{Open Source Side Project \quad March. 2018 -- Present}
+\datedsubsection{\textbf{Go util library collection} \quad \href{https://github.com/dyweb/gommon}{github.com/dyweb/gommon}}{Open source side project \quad March. 2018 -- Present}
 
 % \href{https://github.com/xephonhq/xephon-k}{https://github.com/xephonhq/xephon-k}
 
 \begin{itemize}
 	% \setlength\itemsep{0.1em}
-	\item Built a high performance logging library with fine grained log level control across library dependencies
-	\item Implemented data structure missing from standard library, i.e. set, tree
-	\item Merged template rendering, static asset embedding into a single generator library as replacement for go:generate
+	\item Built a high performance logging library with fine grained log level control across library dependencies.
+	\item Built error wrapping and inspection library based on go 2 draft proposal.
+	\item Implemented data structure missing from standard library, i.e. set, tree.
+	\item Merged template rendering, static asset embedding into a single generator library as replacement for go:generate.
 \end{itemize}
 
 
@@ -139,7 +141,7 @@
 		Language  & Go, JavaScript, Java, C++, Python, SQL, PHP, Shell                                                  \\
 		Database  & Cassandra, MySQL, Elasticsearch, MongoDB, Redis, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite \\
 		DevOps    & Docker, Kubernetes, Mesos, Aurora                                                                   \\
-		Framework & Angular, Vue, Laravel, Spring, Dropwizard, Express, Rails, CUDA, Hadoop
+		Framework & Vue, Angular, Laravel, Spring, Dropwizard, Express, Rails, CUDA, Hadoop
 	\end{tabular}
 \end{flushleft}
 
