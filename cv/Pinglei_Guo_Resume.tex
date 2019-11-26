@@ -12,7 +12,6 @@
 \begin{document}
 
 \name{Pinglei Guo}
-% TODO: put into two lines, address + phone, and the rest
 \centerline{
 	San Jose, CA\ \
 	831-295-1214\ \
@@ -25,18 +24,20 @@
 
 \section{Work Experience}
 
-\datedsubsection{\textbf{Google}: Software Engineer - EDA Farm}{Sunnyvale, CA \quad May 2019 - Present \quad}
+\datedsubsection{\textbf{Google}: Software Engineer - Batch job on Kubernetes}{Sunnyvale, CA \quad May 2019 - Dec 2019 \quad}
+% TODO: Add a note saying left due to work authorization issue
 \begin{itemize}
-	\item Go and Python ?
+	\item Wrote services and command line tools in Go and Python with gRPC that runs on both Borg and Kubernetes.
+	\item Troubleshoot and reduced latency of debug session from 2min to 40s, created metrics for performance regression.
 \end{itemize}
 
-\datedsubsection{\textbf{PayPal}: Software Engineer 2 - Multi cluster container orchestration platform in Go}{San Jose, CA \quad May 2018 - May 2019 \quad}
+\datedsubsection{\textbf{PayPal}: Software Engineer - Multi cluster container orchestration platform in Go}{San Jose, CA \quad May 2018 - May 2019 \quad}
 \begin{itemize}
 	% \itemsep0em
-	\item Working on internal \textbf{multi cluster} container orchestration platform using Apache \textbf{Mesos}, Aurora and Docker.
+	\item Worked on internal multi cluster container orchestration platform using Apache Mesos, Aurora and Docker.
 	% \item Built prototype of container storage on top of \textbf{Kubernetes} and Mesos for stateful service like database.
-	\item Built REST API and cli tools in Go for collecting log and metrics along with \textbf{distributed tracing}.
-	\item Introduced new deploy strategy and implemented dynamic internal system check during deploy.
+	\item Built REST API and cli tools in Go for collecting log and metrics along with distributed tracing.
+	\item Introduced new deploy strategy (e.g. canary) and implemented readiness gate, reduced rollout failure rate by 20\%.
 	% \item Fixed race condition during deploy by merging user and internal events in state machine.
 \end{itemize}
 
@@ -44,7 +45,7 @@
 \begin{itemize}
 	% \itemsep0em
 	\item Built API gateway with RBAC for internal container orchestration platform using Go.
-	\item Enhanced dashboard using Angular 4, used by operation team to troubleshoot Java, Node app and manage cluster itself.
+	\item Enhanced dashboard using Angular 4, wrote a new dynamic table component from scratch.
 	% \item Introduced full text search using Apache Solr, wrote an open sourced Go client with cleaner API. % well, no longer maintained
 	% \item Furthered continuous integration (CI) and deployment (CD) pipeline using Jenkins and Docker. % I hate jenkins in PayPal ...
 \end{itemize}
@@ -60,10 +61,10 @@
 \datedsubsection{Dongyue Web Studio: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad Sep. 2013 -- Jan. 2016}
 \begin{itemize}
 	% \setlength\itemsep{0.1em}
-	\item Led web and mobile team. Refactored online ticket booking application \href{https://tongqu.me}{tongqu.me} in 3 month, used by 10,000 students.
-	\item Built high traffic website and REST API using PHP and MySQL, reduced database contention using job queue and cache.
+	\item Led web and mobile team. Refactored online event booking website \href{https://tongqu.me}{tongqu.me}, used by thousands of students.
+	%\item Built high traffic website and REST API using PHP and MySQL, reduced database contention using job queue and cache.
 	\item Utilized Redis as cache and rate limiter, increased QPS by 120\%, reduced database load by 40\%, filtered out most bot traffic.
-	% \item Refactored jQuery codebase using AngularJS, increased homepage loading speed by 60\% using Ajax and pre-render.
+	\item Refactored jQuery codebase using AngularJS, increased homepage loading speed by 60\% using Ajax and pre-render.
 \end{itemize}
 
 \section{Project Experience}
@@ -74,9 +75,10 @@
 
 \begin{itemize}
 	% \setlength\itemsep{0.1em}
-	\item Built a high performance logging library with fine grained log level control across library dependencies.
+	\item Built a high performance structured logging library with fine grained control across libraries.
 	% \item Built error wrapping and inspection library based on go 2 draft proposal.
 	% \item Implemented data structure missing from standard library, i.e. set, tree.
+	% TODO: rephrase this ...
 	\item Merged template rendering, static asset embedding into a single generator library as replacement for go:generate.
 \end{itemize}
 
@@ -128,8 +130,6 @@
 %   \item Accelerated point and range query using in memory LRU cache, supporting external cache like Memcached and Redis.
 % \end{itemize}
 
-% TODO: gommon
-
 \section{Education}
 % FIXED: too much space between educations
 % FIXME: Package hyperref Warning: Token not allowed in a PDF string (Unicode) , caused by use \quad
@@ -141,10 +141,10 @@
 % https://tex.stackexchange.com/questions/16258/how-can-the-margins-around-a-table-set-to-0pt
 \begin{flushleft}
 	\begin{tabular}{@{}ll@{}}
-		Language  & Go, JavaScript, Java, C++, Python, SQL, PHP, Shell                                                  \\
+		Language  & Go, C++, Rust, JavaScript, Java, Python, SQL, PHP, Shell                                                  \\
 		Database  & Cassandra, MySQL, Elasticsearch, MongoDB, Redis, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite \\
-		DevOps    & Docker, Kubernetes, Mesos, Aurora                                                                   \\
-		Framework & Vue, Angular, Laravel, Spring, Dropwizard, Express, Rails, CUDA, Hadoop
+		DevOps    & Docker, Kubernetes, Mesos, Aurora, Terraform                                                              \\
+		Framework & Vue, Angular, Laravel, Spring, Dropwizard, Express, Rails, CUDA
 	\end{tabular}
 \end{flushleft}
 
