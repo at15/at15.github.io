@@ -4,10 +4,42 @@
 <head>
     <meta charset="utf-8">
     <title>Pinglei Guo</title>
-    <link rel="stylesheet" href="assets/common.css" media="screen">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <style media="screen">
+        /* simple style following http://jgthms.com/web-design-in-4-minutes */
+
+        body {
+            margin: auto;
+            max-width: 50em;
+            font-family: "Helvetica", "Arial", sans-serif;
+            /* more readable */
+            line-height: 1.5;
+            padding: 4em 1em;
+        }
+
+        /* TODO: what about other hx? */
+        div#head-line>h1 {
+            float: right;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #222;
+        }
+
+        a {
+            color: #e81c4f;
+        }
+
+        h4>a {
+            color: #222;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,26 +66,30 @@
     </h3>
     <div>
         <!-- TODO: link to headers and back to top -->
-        <!-- TODO: Add image for schools  -->
-        <h2>Time line</h2>
+        <h2>Timeline</h2>
         <p>
-            May 2019 - Present &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Software Engineer Google, Sunnyvale, CA
+            May 2019 - Dec. 2019 &nbsp;&nbsp;&nbsp; Software Engineer Google, Sunnyvale, CA
             <ul>
-                <li>EDA Farm</li>
+                <li>Improved custom controller for handling high load batch job on Kubernetes</li>
+                <li>Wrote services and tools in Go and Python that communicates in gRPC, runs on Kubernetes</li>
+                <li>Troubleshoot and reduced latency of debug session from 2min to 40s</li>
             </ul>
         </p>
         <p>
-            May 2018 - May 2019 &nbsp;&nbsp;&nbsp; SDE PayPal, San Jose, CA
+            May 2018 - May 2019 &nbsp;&nbsp;&nbsp; Software Engineer PayPal, San Jose, CA
             <ul>
-                <li>Internal container orchestration platform (CaaS) in Go</li>
+                <li>Internal multi cluster container orchestration platform (CaaS) in Go</li>
             </ul>
         </p>
         <p>
             Sep. 2016 - Mar. 2018 &nbsp;&nbsp;&nbsp; MS. Computer Science University of California Santa Cruz (UCSC)
         </p>
         <ul>
-            <li>Building
-                <a href="https://github.com/xephonhq/xephon-k" target="_blank">Xephon-K</a>: Distributed time series database with multiple backend </li>
+            <li>Designed <a href="https://github.com/benchhub/benchhub" target="_blank">BenchHub</a>: distributed
+                database benchmark and result sharing platform</li>
+            <li>Built
+                <a href="https://github.com/xephonhq/xephon-k" target="_blank">Xephon-K</a>: Distributed time series
+                database with multiple backend </li>
             <li>Software engineer intern at PayPal, San Jose, CA</li>
         </ul>
         <p>
@@ -63,8 +99,8 @@
             <li>President and Full stack web developer of
                 <a href="http://www.dongyueweb.com/" target="_blank">Dongyue Web Studio</a>
             </li>
-            <li>Research Assitant in SJTU</li>
-            <li>Research Assitant in Victoria University, Australia</li>
+            <li>Research Assistant in SJTU</li>
+            <li>Research Assistant in Victoria University, Australia</li>
             <li>Software engineer intern at GitCafe, Shanghai</li>
         </ul>
     </div>
@@ -72,11 +108,12 @@
     <div>
         <h2>Biography</h2>
         <p>
-            I am a Software Engineer at Google working on ?? (don't know the detail yet). Previously I worked at PayPal on container platform. I got my master degree in
-            <a href="https://www.ucsc.edu/"
-                target="_blank">UCSC</a>
+            I am a Software Engineer at Google working on ?? (don't know the detail yet). Previously I worked at PayPal
+            on container platform. I got my master degree in
+            <a href="https://www.ucsc.edu/" target="_blank">UCSC</a>
             and bachelor degree in
-            <a href="http://http://www.sjtu.edu.cn/" target="_blank">SJTU</a>. My main interests are time series database (see
+            <a href="http://http://www.sjtu.edu.cn/" target="_blank">SJTU</a>. My main interests are time series
+            database (see
             <a href="https://github.com/xephonhq" target="_blank">Xephon</a>) and database benchmark (see
             <a href="https://github.com/benchhub" target="_blank">BenchHub</a>). I also maintain some go libraries (see
             <a href="https://github.com/dyweb/gommon" target="_blank">gommon</a>) and is working on a DSL (see
@@ -85,28 +122,34 @@
             <a href="https://github.com/at15" target="_blank">GitHub</a>, reinventing wheels and write about
             <a href="https://github.com/at15/papers-i-read" target="_blank">papers I read</a>
             and
-            <a href="https://github.com/at15/code-i-read" target="_blank">code I read</a>. I am planning to combine them into a huge book
-            <a href="https://github.com/at15/pub" target="_blank">at15/pub</a>, though I might be the only reader for the book.
+            <a href="https://github.com/at15/code-i-read" target="_blank">code I read</a>. I am planning to combine them
+            into a huge book
+            <a href="https://github.com/at15/pub" target="_blank">at15/pub</a>, though I might be the only reader for
+            the book.
         </p>
 
         <p>
-            During my two years at UCSC (I didn't expect I would stay that long, thanks to my thesis committee). I did three things,
+            During my two years at UCSC (I didn't expect I would stay that long, thanks to my thesis committee). I did
+            three things,
             wrote
             <a href="https://github.com/dyweb/gommon" target="_blank">gommon</a>, built
             <a href="https://github.com/xephonhq" target="_blank">Xephon</a>, designed
             <a href="https://github.com/benchhub" target="_blank">BenchHub</a> as my master thesis.
-            <a href="https://github.com/xephonhq" target="_blank">Xephon</a> includes course projects for all my system and programming language related courses in UCSC (CMPS232,
+            <a href="https://github.com/xephonhq" target="_blank">Xephon</a> includes course projects for all my system
+            and programming language related courses in UCSC (CMPS232,
             CMPS278, CMPS229, CMPS203, CMPS253).
             <a href="https://github.com/xephonhq/xephon-b">Xephon-B</a> is a benchmark tool,
-            <a href="https://github.com/xephonhq/xephon-k">Xephon-K</a> is a multi backends TSDB with its own local persistent store.
+            <a href="https://github.com/xephonhq/xephon-k">Xephon-K</a> is a multi backends TSDB with its own local
+            persistent store.
             <a href="https://github.com/reikalang">Reika</a> is a DSL for time series database started in Xephon.
         </p>
 
         <p>
             I was a fullstack web developer and former president of
-            <a href="http://dongyueweb.com/" target="_blank">Dongyue Web Studio</a>, where students build web and mobile applications. I lead the develop for
-            <a href="http://tongqu.me"
-                target="_blank">Tongqu</a>, an online campus event platform with many active users and tackled high concurrency problem
+            <a href="http://dongyueweb.com/" target="_blank">Dongyue Web Studio</a>, where students build web and mobile
+            applications. I lead the develop for
+            <a href="http://tongqu.me" target="_blank">Tongqu</a>, an online campus event platform with many active
+            users and tackled high concurrency problem
             with limited hardware resource (another way of saying no funding from school).
         </p>
 
@@ -155,20 +198,25 @@
             <p>Building API and cross cluster orchestration logic for container platform</p>
             <p>
                 <ul>
-                    <li>Working on internal multi data center container platform using Apache Mesos, Aurora and Docker</li>
+                    <li>Working on internal multi data center container platform using Apache Mesos, Aurora and Docker
+                    </li>
                     <li>Introduced new deploy strategy and implemented dynamic internal system check during deploy</li>
                     <li>Built prototype of container storage on top of Kubernetes and Mesos for stateful service</li>
-                    <li>Built REST API and cli tools in Go for collecting log and metrics along with distributed tracing</li>
+                    <li>Built REST API and cli tools in Go for collecting log and metrics along with distributed tracing
+                    </li>
                 </ul>
             </p>
         </div>
         <div>
             <h4>PayPal: Software Engineer Intern</h4>
-            <p>Worked with PaaS team on internal container orchestration platform. Built API gateway and enhanced admin dashboard.</p>
+            <p>Worked with PaaS team on internal container orchestration platform. Built API gateway and enhanced admin
+                dashboard.</p>
             <p>
                 <ul>
-                    <li>Built a plugin driven micro service tool kit in Go, support auth, caching, searching with different providers</li>
-                    <li>Created UI components with native angular binding using Semantic-UI, inlcuding table, editor etc.</li>
+                    <li>Built a plugin driven micro service tool kit in Go, support auth, caching, searching with
+                        different providers</li>
+                    <li>Created UI components with native angular binding using Semantic-UI, inlcuding table, editor
+                        etc.</li>
                     <li>Wrote a new Go client for Solr
                         <a href="https://github.com/at15/go-solr" target="_blank">at15/go-solr</a>
                     </li>
@@ -180,8 +228,10 @@
                 <a href="https://gitcafe.com" target="_blank">GitCafe: Software Engineer Intern</a>
             </h4>
             <p>
-                GitCafe is the first git hosting company in China, focusing on enterprise and education, it is now accquired by Coding.net.
-                I met Rainux and Simsicon on Hackshanghai hackathon during road show and got an internship opportunity. I
+                GitCafe is the first git hosting company in China, focusing on enterprise and education, it is now
+                accquired by Coding.net.
+                I met Rainux and Simsicon on Hackshanghai hackathon during road show and got an internship opportunity.
+                I
                 worked as a Ruby engineer at Beijing during winter vacation. I closed many tickets. My knowledge for Git
                 itself and Git workflow increased a lot since GitCafe is a git hosting company.
             </p>
@@ -190,7 +240,8 @@
                 <ul>
                     <li>Improve user subscription logic</li>
                     <li>Ask the question
-                        <a href="https://www.zhihu.com/question/40942874" target="_blank">why it is acquired</a> on Zhihu</li>
+                        <a href="https://www.zhihu.com/question/40942874" target="_blank">why it is acquired</a> on
+                        Zhihu</li>
                 </ul>
             </p>
         </div>
@@ -199,11 +250,16 @@
                 <a href="http://www.dongyueweb.com" target="_blank">Dongyue Web Studio</a>
             </h4>
             <p>
-                <a href="http://www.dongyueweb.com" target="_blank">Dongyue Web Studio</a> is formed by students from Shanghai Jiao Tong University. Most of them are undergraduate
-                students major in computer science and internet security. It's the place where I started to learn real programming.
-                Unlike course projects, I got chance to collaborate with experienced senior students and hear lectures from
-                alumins working in Google, Microsoft. The product we developed is used by thousands of students in the campus
-                and we also help startups to build their prototypes. I took an active part in the studio, though I majored
+                <a href="http://www.dongyueweb.com" target="_blank">Dongyue Web Studio</a> is formed by students from
+                Shanghai Jiao Tong University. Most of them are undergraduate
+                students major in computer science and internet security. It's the place where I started to learn real
+                programming.
+                Unlike course projects, I got chance to collaborate with experienced senior students and hear lectures
+                from
+                alumins working in Google, Microsoft. The product we developed is used by thousands of students in the
+                campus
+                and we also help startups to build their prototypes. I took an active part in the studio, though I
+                majored
                 in Material Science, my efforts let me stand out and end up being the president of the studio.
                 (The true reason is most life winners in the studio chose to spend more time with their SO)
             </p>
@@ -216,65 +272,37 @@
                     <li>Improve Git workflow by introducing continuous integration</li>
                     <li>Build internal tools for build, test and deploy</li>
                     <li>
-                        <a href="https://github.com/dyweb/course" target="_blank">Traning courses</a>
+                        <a href="https://github.com/dyweb/course" target="_blank">Training courses</a>
                     </li>
                     <li>
                         <a href="https://github.com/dyweb/weekly" target="_blank">Weekly</a>
-                    </li>
-                    <li>
-                        <del>Buy XBox One and a bunch of games</del>
-                    </li>
-                    <li>
-                        <del>Decrease the precentage of bachelors in the studio</del>
                     </li>
                 </ul>
             </p>
         </div>
     </div>
 
-    <!-- <div>
+    <div>
         <h2>Research</h2>
         <div>
-            <h4>
-                <i>University of California Santa Cruz</i>
-            </h4>
+            <h4>University of California Santa Cruz</h4>
             <p>
-                I am working on Xephon-B
-                <a href="https://github.com/xephonhq/xephon-b" target="_blank">A time series benchmark tool</a> for my distributed system class. I am also working with PhD student on distributied
-                systems consistency validation using
-                <a href="http://jepsen.io/" target="_blank">Jepsen</a>
-                For my master thesis I am planning to build a hybird time series and graph database for analytics.
+                TODO: fill the blank
             </p>
         </div>
         <div>
-            <h4>
-                <i>Research Assitant</i>&nbsp;Shanghai Jiao Tong University, China</h4>
+            <h4>Shanghai Jiao Tong University, China</h4>
             <p>
-                I joined Prof. Cao's lab because I heard from collegues in the studio that he is looking for someone to develop a dashboard
-                for a distributed system monitor prototype. Though I'm good at web development, I have more interest in doing
-                lower level programming. So when the senior students left the project, I got the chance to refactor the old
-                code. My knowledge for Java and computer network are limited to what is taught in the course. Thanks to this
-                project I got to know how protocols work by design a simple plain text protocol to transform data and control
-                probe's behaviour. Also I have made contribution to open source projects like KairosDB, a time series database
-                based on Cassendra.
+                TODO: fill the blank
             </p>
         </div>
         <div>
-            <h4>
-                <i>Research Assitant</i>&nbsp;Victoria University, Australia</h4>
+            <h4>Victoria University, Australia</h4>
             <p>
-                Since I want to know more research environment and culture outside China. I spent my summer vacation as reseach assitant
-                in Prof. He's group. A tax consultanting company in Melbourne want to know what's their customers estimated
-                commerical value, most of them are sports man in Australia Football. I am repsponsible for collecting data
-                and some minor text mining tasks. Since all the other students use C#, I gave up my favorite language PHP
-                and wrote a crawler in C# and embed it in a ASP.NET web application. As for text mining, we need to figure
-                out press and social media's opinion towards an athlete and combine with his performance to generate their
-                commerical value rank. The project is still working in progress when I head back to Prof. Cao's lab, other
-                two PHD students are still working on the text mining part to improve accurace and estimate the whole market
-                value based on advertisement and press.
+                TODO: fill the blank
             </p>
         </div>
-    </div> -->
+    </div>
 
     <div>
         <h2>Skill</h2>
@@ -284,7 +312,7 @@
                     <strong>Language</strong>
                 </td>
                 <td>
-                    Go, Java, PHP, JavaScript, Python, SQL, C++, Scala
+                    Go, C++, Rust, Java, PHP, JavaScript, Python, SQL, Scala
                 </td>
             </tr>
             <tr>
@@ -319,9 +347,11 @@
         <ul>
             <!-- TODO: add id and inner link from research -->
             <li>
-                <a href="/pub/cpu_load_prediction.pdf" target="_blank">CPU load prediction based on a multidimensional spatial voting model</a>
+                <a href="/pub/cpu_load_prediction.pdf" target="_blank">CPU load prediction based on a multidimensional
+                    spatial voting model</a>
                 <span>Yu Chen, Jian Cao and
-                    <strong>Pinglei Guo</strong>, 2015 IEEE International Conference on Data Science and Data Intensive Systems,
+                    <strong>Pinglei Guo</strong>, 2015 IEEE International Conference on Data Science and Data Intensive
+                    Systems,
                     Sydney, NSW, 2015</span>
             </li>
         </ul>
