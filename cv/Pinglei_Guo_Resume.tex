@@ -25,29 +25,28 @@
 \section{Work Experience}
 
 \datedsubsection{\textbf{Google}: Software Engineer - Batch job on Kubernetes}{Sunnyvale, CA \quad May 2019 - Dec 2019 \quad}
-% TODO: maybe add a note saying left due to work authorization issue
+% TODO: maybe add a note saying left due to work authorization issue?
 \begin{itemize}
-	\item Implemented gRPC server and client in Go and Python, deployed on Borg and Kuberentes.
+	\item Implemented gRPC server and client in Go and Python backed by Spanner, deployed on Borg and Kuberentes.
+	\item Improved reliability of custom batch job controller for Kuberentes, eliminated job lost during controller service restart.
 	\item Troubleshoot and reduced startup latency of debug session from 2min to 40s, created metrics for performance regression.
+	\item Designed and implemented downloading individual file(s) within zip archive hosted on object store (GCS, S3) without extracting entire archive.
+	Reduced latency for large batch job input (GB) by order of magnitude, i.e. 5min to 100ms.
 \end{itemize}
 
 \datedsubsection{\textbf{PayPal}: Software Engineer - Multi cluster container orchestration platform in Go}{San Jose, CA \quad May 2018 - May 2019 \quad}
 \begin{itemize}
-	% \itemsep0em
 	\item Worked on internal multi cluster container orchestration platform using Apache Mesos, Aurora and Docker.
-	% \item Built prototype of container storage on top of \textbf{Kubernetes} and Mesos for stateful service like database.
-	\item Built REST API and cli tools in Go for collecting log and metrics along with distributed tracing.
 	\item Introduced new deploy strategy (e.g. canary) and implemented readiness gate, reduced rollout failure rate by 20\%.
-	% \item Fixed race condition during deploy by merging user and internal events in state machine.
+	\item Built REST API and cli tools in Go to collect log, metrics, distributed traces and profile data.
+	\item Built Kubernetes operator for running stateful services like database with in house underlay container network solution.
 \end{itemize}
 
 \datedsubsection{\textbf{PayPal}: Software Engineer Intern - Admin Server \& Dashboard in Go}{San Jose, CA \quad June 2017 - Sep. 2017}
 \begin{itemize}
-	% \itemsep0em
 	\item Built API gateway with RBAC for internal container orchestration platform using Go.
 	\item Enhanced dashboard using Angular 4, wrote a new dynamic table component from scratch.
 	% \item Introduced full text search using Apache Solr, wrote an open sourced Go client with cleaner API. % well, no longer maintained
-	% \item Furthered continuous integration (CI) and deployment (CD) pipeline using Jenkins and Docker. % I hate jenkins in PayPal ...
 \end{itemize}
 
 % sorry GitCafe, the space on resume is limited
@@ -60,52 +59,41 @@
 
 \datedsubsection{Dongyue Web Studio: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad Sep. 2013 -- Jan. 2016}
 \begin{itemize}
-	% \setlength\itemsep{0.1em}
-	\item Led web and mobile team. Refactored online event booking website \href{https://tongqu.me}{tongqu.me}, used by thousands of students.
+	\item Led web and mobile team. Rewrote online event booking website \href{https://tongqu.me}{tongqu.me}, used by thousands of students.
 	%\item Built high traffic website and REST API using PHP and MySQL, reduced database contention using job queue and cache.
 	\item Utilized Redis as cache and rate limiter, increased QPS by 120\%, reduced database load by 40\%, filtered out most bot traffic.
-	\item Refactored jQuery codebase using AngularJS, increased homepage loading speed by 60\% using Ajax and pre-render.
+	\item Migrated frontend from jQuery to AngularJS, reduced page loading speed by 60\% using Ajax.
 \end{itemize}
 
 \section{Project Experience}
 
-\datedsubsection{\textbf{Go util library collection} \quad \href{https://github.com/dyweb/gommon}{github.com/dyweb/gommon}}{Open source side project \quad March. 2018 -- Present}
+% \datedsubsection{\textbf{Go util library collection} \quad \href{https://github.com/dyweb/gommon}{github.com/dyweb/gommon}}{Open source side project \quad March. 2018 -- Present}
 
-\begin{itemize}
-	% \setlength\itemsep{0.1em}
-	\item Built a high performance structured logging library with fine grained control across libraries.
-	% \item Built error wrapping and inspection library based on go 2 draft proposal.
-	% \item Implemented data structure missing from standard library, i.e. set, tree.
-	% TODO: rephrase this ...
-	\item Merged template rendering, static asset embedding into a single generator library as replacement for go:generate.
-\end{itemize}
+% \begin{itemize}
+% 	\item Built a high performance structured logging library with fine grained control across libraries.
+% \end{itemize}
 
 \datedsubsection{\textbf{Distributed database benchmark system} \quad \href{https://github.com/benchhub}{github.com/benchhub}}{UCSC \quad Nov. 2017 -- March. 2018}
 
 \begin{itemize}
-	% \setlength\itemsep{0.1em}
-	\item Designed a specification for running distributed database benchmark.
-	\item Built a queue based scheduler to run distributed database and workload generators.
-	\item Stored benchmark results in time series databases and metadata in relation databases.
+	\item Designed a specification for running database benchmark for RDBMS and TSDB in distributed environment.
+	\item Implemented a continuous integration service that stores benchmark results in databases to detect performance regression.
 \end{itemize}
 
 \datedsubsection{\textbf{Distributed Time Series Database} \quad \href{https://github.com/xephonhq/xephon-k}{github.com/xephonhq/xephon-k}}{UCSC \quad Nov. 2016 -- Present}
 
 \begin{itemize}
-	% \setlength\itemsep{0.1em}
 	\item Implemented a distributed time series database on top of Cassandra in Go. Support both JSON and Protobuf via HTTP/2.
-	\item Designed a columnar format modeled after Parquet and InfluxDB with high compression and less write amplification.
+	\item Designed a columnar storage engine modeled after Parquet and InfluxDB with high compression and less write amplification.
 	\item Created benchmark suite for Xephon-K, OpenTSDB, KariosDB, InfluxDB using a generic client for different TSDB.
-	\item Surveyed popular TSDB design and implementation, made an interactive online report called \href{https://xephonhq.github.io/awesome-time-series-database}{awesome-time-series-database}.
+	\item Surveyed popular TSDB design and implementation, made an interactive online report \href{https://xephonhq.github.io/awesome-time-series-database}{awesome-time-series-database}.
 \end{itemize}
 
 \datedsubsection{\textbf{GPU accelerated in-memory time series processing} \quad \href{https://github.com/at15/ts-parallel}{github.com/at15/ts-parallel}}{UCSC \quad Apr. 2017 -- June 2017}
 
 \begin{itemize}
-	% \setlength\itemsep{0.1em}
 	\item Expanded benchmark suite for different C++ GPU computing framework on CUDA and OpenCL, Thrust, Boost, ArrayFire.
 	\item Implemented OLAP queries like top-K, group by for multi dimensional time series data on both CPU and GPU backends.
-	      % \item Initiated a in memory column store with run length and dictionary encoding, saved 90\% space for regular time series data.
 \end{itemize}
 
 % \datedsubsection{\textbf{Distributed systems monitoring prototype}}{Shanghai Jiao Tong University \quad Mar. 2015 -- Jan. 2016}
@@ -136,9 +124,9 @@
 \begin{flushleft}
 	\begin{tabular}{@{}ll@{}}
 		Language  & Go, C++, Rust, JavaScript, Java, Python, SQL, PHP, Shell                                                  \\
-		Database  & Cassandra, MySQL, Elasticsearch, MongoDB, Redis, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite \\
-		DevOps    & Docker, Kubernetes, Mesos, Aurora, Terraform                                                              \\
-		Framework & Vue, Angular, Laravel, Spring, Dropwizard, Express, Rails, CUDA
+		Database  & Cassandra, MySQL, Elasticsearch, TiDB, Redis, KairosDB, OpenTSDB, InfluxDB, Prometheus, Graphite \\
+		DevOps    & Kubernetes, Docker, Mesos, Aurora, Terraform, GCP, AWS                                                           \\
+		Web       & Vue, Angular, Laravel, Spring, Dropwizard, Express, Rails
 	\end{tabular}
 \end{flushleft}
 
