@@ -1,7 +1,7 @@
 .PHONY: build
 build:
 	xelatex Pinglei_Guo_Resume.tex
-	# for backwards compatibility
+# for backwards compatibility
 	cp Pinglei_Guo_Resume.pdf at15.en.pdf
 
 .PHONY: build-cn
