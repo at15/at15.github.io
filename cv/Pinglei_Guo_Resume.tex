@@ -23,18 +23,21 @@
 
 \section{Work Experience}
 
+% TODO: Split into two sections X-Ray and CloudWatch Agent
+% TODO: W3C, lead team of ? engineers?
 \datedsubsection{\textbf{AWS}: Software Engineer - AWS X-Ray}{Vancouver, Canada \quad Sep 2020 - Present \quad}
 \begin{itemize}
-	\item Working on AWS X-Ray \href{https://aws.amazon.com/xray/}, a distributed tracing service, improve API scalability and reduce latency.
-	\item Worked on the open source \href{https://github.com/aws/amazon-cloudwatch-agent}{CloudWatch Agent} and \href{https://github.com/aws-observability/aws-otel-collector}{OpenTelemetry Collector}.
+	\item Enhanced API scalability and reduced latency for \href{https://aws.amazon.com/xray/}{AWS X-Ray}, a distributed tracing service.
+	\item Contributed to the open source \href{https://github.com/aws/amazon-cloudwatch-agent}{CloudWatch Agent} and \href{https://github.com/aws-observability/aws-otel-collector}{OpenTelemetry Collector}.
 \end{itemize}
 
 \datedsubsection{\textbf{Google}: Software Engineer - Batch job on Kubernetes}{Sunnyvale, CA \quad May 2019 - Nov. 2019 \quad}
 % TODO: maybe add a note saying left due to work authorization issue?
 \begin{itemize}
-	\item Implemented gRPC server and client in Go and Python backed by Spanner, deployed on Borg and Kuberentes.
-	\item Improved reliability of custom batch job controller for Kuberentes, eliminated job lost during controller service restart.
-	\item Troubleshoot and reduced startup latency of debug session from 2min to 40s, created metrics for performance regression.
+	\item Developed gRPC server and client in Go and Python, backed by Spanner, deployed on Borg and Kuberentes.
+	\item Improved reliability of custom batch job controller for Kuberentes, eliminating job lost during controller service restart.
+	% TODO: How? I kind of forgot ... it's been too long
+	\item Reduced startup latency of debug session from 2 minutes to 40 seconds.
 	% \item Designed and implemented downloading individual file(s) within zip archive hosted on object store (GCS, S3) without extracting entire archive.
 	% Reduced latency for large batch job input (GB) by order of magnitude, i.e. 5min to 100ms.
 \end{itemize}
@@ -120,16 +123,16 @@
 \section{Education}
 % FIXED: too much space between educations
 % FIXME: Package hyperref Warning: Token not allowed in a PDF string (Unicode) , caused by use \quad
-\datedsubsection{MS. Computer Science \quad University of California Santa Cruz \quad \ GPA 3.9}{Sep. 2016 -- Mar. 2018}
+\datedsubsection{MS. Computer Science \quad University of California Santa Cruz}{Sep. 2016 -- Mar. 2018}
 % Courses: Distributed systems, Database Systems, Storage System
-\datedsubsection{BS. \ Materials Science \quad \ Shanghai Jiao Tong University \qquad \  \quad GPA 3.3}{Sep. 2012 -- June 2016}
+\datedsubsection{BS. \ Materials Science \quad \ Shanghai Jiao Tong University}{Sep. 2012 -- June 2016}
 
 \section{Skills}
 % https://tex.stackexchange.com/questions/16258/how-can-the-margins-around-a-table-set-to-0pt
 \begin{flushleft}
 	\begin{tabular}{@{}ll@{}}
-		Language  & Go, Java, Rust, C++, JavaScript, Python, SQL, PHP, Shell                                                  \\
-		Database  & DynamoDB, Cassandra, MySQL, Elasticsearch, TiDB, Redis, KairosDB, Prometheus \\
+		Language  & Go, Java, JavaScript, Python, Rust, C++, SQL                                                  \\
+		Database  & DynamoDB, Cassandra, MySQL, Elasticsearch, Redis, Prometheus \\
 		DevOps    & AWS, Kubernetes, Docker, Terraform, GCP                                                         \\
 		% Web       & Vue, Angular, Laravel, Spring, Dropwizard, Express, Rails
 	\end{tabular}
