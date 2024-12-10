@@ -17,45 +17,49 @@
 }
 \centerline{
 	Email: \href{plguo002@gmail.com}{plguo002@gmail.com}\ \
-	% \href{https://at15.github.io}{at15.github.io}\ \
+	Website: \href{https://at15.dev}{at15.dev}\ \
 	GitHub: \href{https://github.com/at15}{https://github.com/at15}\ \
 	LinkedIn: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/at1510086}}
 
 \section{Work Experience}
 
-% TODO: Split into two sections X-Ray and CloudWatch Agent
-% TODO: W3C, lead team of ? engineers?
-\datedsubsection{\textbf{AWS}: Software Engineer - AWS X-Ray}{Vancouver, Canada \quad Sep 2020 - Present \quad}
+\datedsubsection{\textbf{AWS}: Software Engineer - Amazon CloudWatch and X-Ray}{Vancouver, Canada \quad Sep 2020 - Present \quad}
 \begin{itemize}
-	\item Enhanced API scalability and reduced latency for \href{https://aws.amazon.com/xray/}{AWS X-Ray}, a distributed tracing service.
-	\item Contributed to the open source \href{https://github.com/aws/amazon-cloudwatch-agent}{CloudWatch Agent} and \href{https://github.com/aws-observability/aws-otel-collector}{OpenTelemetry Collector}.
+	\item Led a team of 6 engineers to implement W3C trace ID support in AWS X-Ray.
+	Refactored data sharding and indexing logic to remove X-Ray trace ID timestamp dependency, unblocking 20,000 AWS accounts and enabling OpenTelemetry integration.
+	\item Collaborated with Lambda and Application Signals teams to integrate OpenTelemetry in X-Ray ingestion API. Reduced Python Lambda function cold start time by 60\% by removing OpenTelemetry collector from the Lambda layer.
+	\item Designed and implemented conversion logic between OpenTelemetry trace spans, 
+	\href{https://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html}{X-Ray segments} and 
+	\href{https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Transaction-Search.html}{CloudWatch transaction search log events},
+	reducing customer trace data storage cost by 70\% using log storage so they can sample 100\% traces.
+	\item Maintainer of open source projects on GitHub: \href{https://github.com/aws/amazon-cloudwatch-agent}{Amazon CloudWatch Agent} and \href{https://github.com/aws-observability/aws-otel-collector}{Amazon Distro of OpenTelemetry Collector}.
+	\item Developed the \href{https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/observer/ecsobserver}{ECS extension} for \href{https://github.com/open-telemetry/opentelemetry-collector-contrib}{OpenTelemetry Collector},
+	enabling Prometheus discovery with metadata from ControlPlane.
 \end{itemize}
 
 \datedsubsection{\textbf{Google}: Software Engineer - Batch job on Kubernetes}{Sunnyvale, CA \quad May 2019 - Nov. 2019 \quad}
-% TODO: maybe add a note saying left due to work authorization issue?
 \begin{itemize}
-	\item Developed gRPC server and client in Go and Python, backed by Spanner, deployed on Borg and Kuberentes.
-	\item Improved reliability of custom batch job controller for Kuberentes, eliminating job lost during controller service restart.
-	% TODO: How? I kind of forgot ... it's been too long
-	\item Reduced startup latency of debug session from 2 minutes to 40 seconds.
-	% \item Designed and implemented downloading individual file(s) within zip archive hosted on object store (GCS, S3) without extracting entire archive.
-	% Reduced latency for large batch job input (GB) by order of magnitude, i.e. 5min to 100ms.
+	% TODO: How to measure this? though I just to give a quick intro of job content ...
+	\item Eliminated the 5\% job lost during controller deployment by optimizing the order of database update and job submission.
+	\item Reduced debug session startup latency from 2 minutes to 40 seconds by loading artifacts on demand from object store.
 \end{itemize}
 
 \datedsubsection{\textbf{PayPal}: Software Engineer - Multi cluster container orchestration platform in Go}{San Jose, CA \quad May 2018 - May 2019 \quad}
 \begin{itemize}
-	\item Worked on internal multi cluster container orchestration platform using Apache Mesos, Aurora and Docker.
-	\item Introduced new deploy strategy (e.g. canary) and implemented readiness gate, reduced rollout failure rate by 20\%.
-	% \item Built REST API and cli tools in Go to collect log, metrics, distributed traces and profile data.
-	\item Built Kubernetes operator for running stateful services like database with in house underlay container network solution.
+	%\item Worked on internal multi cloud container orchestration platform using Apache Mesos, Aurora, Docker and Cassandra.
+	\item Developed a Go-based monitoring tool to correlate logs, metrics, and traces on deployment failures, automatically identifying root causes base on topology. This reduced on-call debug time from 10 minutes to 2 minutes.
+	\item Introduced canary deployment strategy and dependency readiness check, reducing deployment rollback ratio by 20\%.
+	% TODO: number? I think I mentioned this because this is k8s crd, which is also what I did in Google ...
+	%\item Built Kubernetes operator for running stateful services like database with in house underlay container network solution.
 \end{itemize}
 
-\datedsubsection{\textbf{PayPal}: Software Engineer Intern - Admin Server \& Dashboard in Go}{San Jose, CA \quad June 2017 - Sep. 2017}
-\begin{itemize}
-	\item Built API gateway with RBAC for internal container orchestration platform using Go.
-	\item Enhanced dashboard using Angular 4, wrote a new dynamic table component from scratch.
-	% \item Introduced full text search using Apache Solr, wrote an open sourced Go client with cleaner API. % well, no longer maintained
-\end{itemize}
+% intern time at PayPal no longer matters after working for so many years
+% \datedsubsection{\textbf{PayPal}: Software Engineer Intern - Admin Server \& Dashboard in Go}{San Jose, CA \quad June 2017 - Sep. 2017}
+% \begin{itemize}
+% 	\item Built API gateway with role based auth (RBAC) for internal container platform using Go.
+% 	\item Designed a reusable dynamic table component with filter and sort in Typescript, reducing redundant code by 90\%.
+% 	% \item Introduced full text search using Apache Solr, wrote an open sourced Go client with cleaner API. % well, no longer maintained
+% \end{itemize}
 
 % sorry GitCafe, the space on resume is limited
 % \datedsubsection{GitCafe: Software Engineer Intern}{Shanghai, China \quad Jan. 2015 -- Mar. 2015}
@@ -65,12 +69,13 @@
 % 	\item Fixed user subsubcription logic, solved 20\% pricing related user tickets.
 % \end{itemize}
 
-\datedsubsection{Dongyue Web Studio: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad Sep. 2013 -- Jan. 2016}
+\datedsubsection{Dongyue Web Studio at SJTU: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad Sep. 2013 -- Jan. 2016}
 \begin{itemize}
-	\item Led web and mobile team. Rewrote online event booking website \href{https://tongqu.me}{tongqu.me}, used by thousands of students.
-	%\item Built high traffic website and REST API using PHP and MySQL, reduced database contention using job queue and cache.
-	\item Utilized Redis as cache and rate limiter, increased QPS by 120\%, reduced database load by 40\%, filtered out most bot traffic.
-	\item Migrated frontend from jQuery to AngularJS, reduced page loading speed by 60\% using Ajax.
+	% Used and complained by thousands of students ...
+	\item Led web and mobile team to redesign the online event booking website \href{https://tongqu.me}{tongqu.me},
+	implementing a REST API and single-page application using AngularJS.
+	Reduced codebase size by 60\% and improved page load time by 80\%.
+	\item Implemented a Redis and MySQL based queue system to handle ticket rushes, preventing website crashes and ticket overselling while supporting 5x more traffic.
 \end{itemize}
 
 \section{Project Experience}
@@ -91,9 +96,10 @@
 \datedsubsection{\textbf{Distributed Time Series Database} \quad \href{https://github.com/xephonhq/xephon-k}{github.com/xephonhq/xephon-k}}{UCSC \quad Nov. 2016 -- Present}
 
 \begin{itemize}
+	% TODO: number, what's the TPS, what's the compression ratio, TBH I don't think I need them anymore
 	\item Implemented a distributed time series database on top of Cassandra in Go. Support both JSON and Protobuf via HTTP/2.
 	\item Designed a columnar storage engine modeled after Parquet and InfluxDB with high compression and less write amplification.
-	\item Created benchmark suite for Xephon-K, OpenTSDB, KariosDB, InfluxDB using a generic client for different TSDB.
+	\item Created a benchmark suite for OpenTSDB, KariosDB, InfluxDB with a generic interface to support different TSDB.
 	\item Surveyed popular TSDB design and implementation, made an interactive online report \href{https://xephonhq.github.io/awesome-time-series-database}{awesome-time-series-database}.
 \end{itemize}
 
@@ -121,20 +127,18 @@
 % \end{itemize}
 
 \section{Education}
-% FIXED: too much space between educations
 % FIXME: Package hyperref Warning: Token not allowed in a PDF string (Unicode) , caused by use \quad
 \datedsubsection{MS. Computer Science \quad University of California Santa Cruz}{Sep. 2016 -- Mar. 2018}
-% Courses: Distributed systems, Database Systems, Storage System
 \datedsubsection{BS. \ Materials Science \quad \ Shanghai Jiao Tong University}{Sep. 2012 -- June 2016}
 
 \section{Skills}
 % https://tex.stackexchange.com/questions/16258/how-can-the-margins-around-a-table-set-to-0pt
 \begin{flushleft}
 	\begin{tabular}{@{}ll@{}}
-		Language  & Go, Java, JavaScript, Python, Rust, C++, SQL                                                  \\
-		Database  & DynamoDB, Cassandra, MySQL, Elasticsearch, Redis, Prometheus \\
-		DevOps    & AWS, Kubernetes, Docker, Terraform, GCP                                                         \\
-		% Web       & Vue, Angular, Laravel, Spring, Dropwizard, Express, Rails
+		Language  & Go, Java, JavaScript, TypeScript, Python, Dart, Rust, C++, SQL \\
+		Infra     & AWS, GCP, Cloudflare, Kubernetes, Docker, CDK, Terraform, Prometheus, Grafana \\
+		Database  & DynamoDB, Cassandra, MySQL, PostgreSQL, Elasticsearch, Redis  \\
+		Framework & gRPC, React, Flutter, Spring \\
 	\end{tabular}
 \end{flushleft}
 
