@@ -14,41 +14,46 @@
 \name{Pinglei Guo}
 \centerline{
 	Vancouver, BC, Canada\ \
+	\href{plguo002@gmail.com}{plguo002@gmail.com}\ \
+	\href{https://www.linkedin.com/in/at1510086}{linkedin.com/in/at1510086}\ \
+	\href{https://github.com/at15}{github.com/at15}\ \
+	\href{https://at15.dev}{at15.dev}\ \
 }
-\centerline{
-	Email: \href{plguo002@gmail.com}{plguo002@gmail.com}\ \
-	Website: \href{https://at15.dev}{at15.dev}\ \
-	GitHub: \href{https://github.com/at15}{https://github.com/at15}\ \
-	LinkedIn: \href{https://www.linkedin.com/in/at1510086}{https://linkedin.com/in/at1510086}}
-
 \section{Work Experience}
 
 \datedsubsection{\textbf{AWS}: Software Engineer - Amazon CloudWatch and X-Ray}{Vancouver, Canada \quad Sep 2020 - Present \quad}
 \begin{itemize}
 	\item Led a team of 6 engineers to implement W3C trace ID support in AWS X-Ray.
 	Refactored data sharding and indexing logic to remove X-Ray trace ID timestamp dependency, unblocking 20,000 AWS accounts and enabling OpenTelemetry integration.
+	\item Automated on-call investigation using AWS Bedrock by indexing runbooks and incidents into OpenSearch for RAG and creating an agent to execute common runbook commands. Reduced average investigation time from 20 to 5 minutes.
 	\item Collaborated with Lambda and Application Signals teams to integrate OpenTelemetry in X-Ray ingestion API. Reduced Python Lambda function cold start time by 60\% by removing OpenTelemetry collector from the Lambda layer.
 	\item Designed and implemented conversion logic between OpenTelemetry trace spans, 
 	\href{https://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html}{X-Ray segments} and 
 	\href{https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Transaction-Search.html}{CloudWatch transaction search log events},
-	reducing customer trace data storage cost by 70\% using log storage so they can sample 100\% traces.
+	reducing customer trace data storage cost by 70\% and enabling 100\% trace sampling.
+	%\item Improved X-Ray index volume by 5x by implementing proactive shard auto-scaling.
+\end{itemize}
+
+\datedsubsection{\textbf{AWS}: Software Engineer - CloudWatch Agent and OpenTelemetry distro}{Vancouver, Canada \quad Sep 2020 - July 2021 \quad}
+\begin{itemize}
 	\item Maintainer of open source projects on GitHub: \href{https://github.com/aws/amazon-cloudwatch-agent}{Amazon CloudWatch Agent} and \href{https://github.com/aws-observability/aws-otel-collector}{Amazon Distro of OpenTelemetry Collector}.
 	\item Developed the \href{https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/observer/ecsobserver}{ECS extension} for \href{https://github.com/open-telemetry/opentelemetry-collector-contrib}{OpenTelemetry Collector},
 	enabling Prometheus discovery with metadata from ControlPlane.
+	\item Created Kubernetes operator to shard Prometheus scrape targets dynamically based on load instead of static hashmod in hackathon.
+	Contributed to OpenTelemetry Collector Operator as \href{https://github.com/open-telemetry/opentelemetry-operator/tree/main/cmd/otel-allocator}{Target Allocator} and used in EKS addon.
 \end{itemize}
 
 \datedsubsection{\textbf{Google}: Software Engineer - Batch job on Kubernetes}{Sunnyvale, CA \quad May 2019 - Nov. 2019 \quad}
 \begin{itemize}
-	% TODO: How to measure this? though I just to give a quick intro of job content ...
-	\item Eliminated the 5\% job lost during controller deployment by optimizing the order of database update and job submission.
-	\item Reduced debug session startup latency from 2 minutes to 40 seconds by loading artifacts on demand from object store.
+	\item Eliminated 5\% job loss rate during controller deployment by optimizing the sequence of database updates and job submissions.
+	\item Reduced debug session startup latency from 2 minutes to 40 seconds using on-demand artifact loading from object store.
 \end{itemize}
 
 \datedsubsection{\textbf{PayPal}: Software Engineer - Multi cluster container orchestration platform in Go}{San Jose, CA \quad May 2018 - May 2019 \quad}
 \begin{itemize}
 	%\item Worked on internal multi cloud container orchestration platform using Apache Mesos, Aurora, Docker and Cassandra.
-	\item Developed a Go-based monitoring tool to correlate logs, metrics, and traces on deployment failures, automatically identifying root causes base on topology. This reduced on-call debug time from 10 minutes to 2 minutes.
-	\item Introduced canary deployment strategy and dependency readiness check, reducing deployment rollback ratio by 20\%.
+	\item Developed a Go-based monitoring tool to correlate logs, metrics, and traces during deployment failures, automating root cause identification and reducing on-call debug time from 10 minutes to 2 minutes.
+	\item Introduced a canary deployment strategy and dependency readiness checks, reducing deployment rollback ratio by 20\%.
 	% TODO: number? I think I mentioned this because this is k8s crd, which is also what I did in Google ...
 	%\item Built Kubernetes operator for running stateful services like database with in house underlay container network solution.
 \end{itemize}
@@ -69,13 +74,14 @@
 % 	\item Fixed user subsubcription logic, solved 20\% pricing related user tickets.
 % \end{itemize}
 
+% Yet I still love dyweb
 \datedsubsection{Dongyue Web Studio at SJTU: (Part-time) Full stack web developer \& Tech lead}{Shanghai, China \quad Sep. 2013 -- Jan. 2016}
 \begin{itemize}
 	% Used and complained by thousands of students ...
-	\item Led web and mobile team to redesign the online event booking website \href{https://tongqu.me}{tongqu.me},
+	\item Led web and mobile teams to redesign the online event booking website \href{https://tongqu.me}{tongqu.me},
 	implementing a REST API and single-page application using AngularJS.
 	Reduced codebase size by 60\% and improved page load time by 80\%.
-	\item Implemented a Redis and MySQL based queue system to handle ticket rushes, preventing website crashes and ticket overselling while supporting 5x more traffic.
+	\item Implemented a Redis and MySQL based queue system to handle ticket rushes, preventing website crashes and ticket overselling, while supporting 5x more traffic.
 \end{itemize}
 
 \section{Project Experience}
@@ -86,29 +92,29 @@
 % 	\item Built a high performance structured logging library with fine grained control across libraries.
 % \end{itemize}
 
-\datedsubsection{\textbf{Distributed database benchmark system} \quad \href{https://github.com/benchhub}{github.com/benchhub}}{UCSC \quad Nov. 2017 -- March. 2018}
+\datedsubsection{\textbf{Distributed database benchmark tracker} \quad \href{https://github.com/benchhub}{github.com/benchhub}}{UCSC \quad 2017 -- 2018}
 
 \begin{itemize}
-	\item Designed a specification for running database benchmark for RDBMS and TSDB in distributed environment.
-	\item Implemented a continuous integration service that stores benchmark results in databases to detect performance regression.
+	\item Designed configuration for running database benchmark for different RDBMS and TSDB in distributed environment.
+	\item Built a CI service to store benchmark results in databases for performance regression detection
 \end{itemize}
 
-\datedsubsection{\textbf{Distributed Time Series Database} \quad \href{https://github.com/xephonhq/xephon-k}{github.com/xephonhq/xephon-k}}{UCSC \quad Nov. 2016 -- Present}
+\datedsubsection{\textbf{Distributed Time Series Database} \quad \href{https://github.com/xephonhq/xephon-k}{github.com/xephonhq/xephon-k}}{UCSC \quad 2016 -- 2018}
 
 \begin{itemize}
 	% TODO: number, what's the TPS, what's the compression ratio, TBH I don't think I need them anymore
-	\item Implemented a distributed time series database on top of Cassandra in Go. Support both JSON and Protobuf via HTTP/2.
+	\item Implemented a distributed time series database on top of Cassandra in Go. Support both JSON and Protobuf over HTTP/2.
 	\item Designed a columnar storage engine modeled after Parquet and InfluxDB with high compression and less write amplification.
 	\item Created a benchmark suite for OpenTSDB, KariosDB, InfluxDB with a generic interface to support different TSDB.
-	\item Surveyed popular TSDB design and implementation, made an interactive online report \href{https://xephonhq.github.io/awesome-time-series-database}{awesome-time-series-database}.
+	\item Published a comprehensive report on TSDB design and implementation \href{https://xephonhq.github.io/awesome-time-series-database}{awesome-time-series-database}.
 \end{itemize}
 
-\datedsubsection{\textbf{GPU accelerated in-memory time series processing} \quad \href{https://github.com/at15/ts-parallel}{github.com/at15/ts-parallel}}{UCSC \quad Apr. 2017 -- June 2017}
+% \datedsubsection{\textbf{GPU accelerated in-memory time series processing} \quad \href{https://github.com/at15/ts-parallel}{github.com/at15/ts-parallel}}{UCSC \quad Apr. 2017 -- June 2017}
 
-\begin{itemize}
-	\item Expanded benchmark suite for different C++ GPU computing framework on CUDA and OpenCL, Thrust, Boost, ArrayFire.
-	\item Implemented OLAP queries like top-K, group by for multi dimensional time series data on both CPU and GPU backends.
-\end{itemize}
+% \begin{itemize}
+% 	\item Expanded benchmark suite for different C++ GPU computing framework on CUDA and OpenCL, Thrust, Boost, ArrayFire.
+% 	\item Implemented OLAP queries like top-K, group by for multi dimensional time series data on both CPU and GPU backends.
+% \end{itemize}
 
 % \datedsubsection{\textbf{Distributed systems monitoring prototype}}{Shanghai Jiao Tong University \quad Mar. 2015 -- Jan. 2016}
 
@@ -135,10 +141,10 @@
 % https://tex.stackexchange.com/questions/16258/how-can-the-margins-around-a-table-set-to-0pt
 \begin{flushleft}
 	\begin{tabular}{@{}ll@{}}
-		Language  & Go, Java, JavaScript, TypeScript, Python, Dart, Rust, C++, SQL \\
-		Infra     & AWS, GCP, Cloudflare, Kubernetes, Docker, CDK, Terraform, Prometheus, Grafana \\
-		Database  & DynamoDB, Cassandra, MySQL, PostgreSQL, Elasticsearch, Redis  \\
-		Framework & gRPC, React, Flutter, Spring \\
+		Programming Languages  & Go, Java, TypeScript, JavaScript, Python, Dart, Rust, SQL \\
+		Cloud and Infra     & AWS, GCP, Cloudflare, Kubernetes, Docker, CDK, Terraform, Prometheus, Grafana \\
+		Databases  & DynamoDB, Cassandra, MySQL, PostgreSQL, Elasticsearch, OpenSearch, Redis  \\
+		Frameworks & gRPC, React, Next.js, Spring \\
 	\end{tabular}
 \end{flushleft}
 
